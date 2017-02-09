@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="PruebaGit" version="4">
+  <OBJECT>
+    <ID name="PruebaGit" mc="Standard.Project" uid="26a969db-9ffe-48dd-99a9-466f5da5a1da"/>
+    <ATTRIBUTES>
+      <ATT name="ProjectContext"></ATT>
+      <ATT name="ProjectDescr"></ATT>
+      <ATT name="Name"><![CDATA[PruebaGit]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="Model">
+        <COMPID name="pruebagit" mc="Standard.Package" uid="fe21df7c-fcde-48ed-970e-b72ab6554a3f"/>
+      </COMP>
+      <COMP relation="DiagramRoot">
+        <COMPID name="PruebaGit" mc="Infrastructure.DiagramSet" uid="a59bb3fb-871f-418f-a929-87d955dbe6f8"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>
