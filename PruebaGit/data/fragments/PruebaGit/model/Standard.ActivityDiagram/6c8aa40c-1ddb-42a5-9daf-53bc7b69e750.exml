@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Activity Activity diagram" version="4">
+  <OBJECT>
+    <ID name="Activity Activity diagram" mc="Standard.ActivityDiagram" uid="6c8aa40c-1ddb-42a5-9daf-53bc7b69e750"/>
+    <PID name="login" mc="Standard.Activity" uid="afbd293b-e01c-43ac-821a-7591e4e48390"/>
+    <ATTRIBUTES>
+      <ATT name="IsVertical">false</ATT>
+      <ATT name="UiDataVersion">19</ATT>
+      <ATT name="UiData"><![CDATA[eJztmmtv2jwUgP9KhPY1aS4mEME6tTB11VhblXeT9qk6iR3q1Ykrx5Tm38/hNgpt3jQJrKsigRTs+Fzs59g+R/Q/PUZMeyAioTz+2LIMs6V9Ou5f+r9IIDWKVVNLk+k9+djiYmJEHBNGuYEpTAREBsFUcmFAIOkDlalBGIlILJN1y+rFs+hk2TJctLS0CH5xcbNWbbaO+1eC3xMhUy2GSGlkkPKpHIIE1fcD2JQsTYmnjLWOjvtHqwE7Q8cyZaT1xBE7z5Ekez8xAi6IsRhbwL4BJAFgglfKPj/KaxIW1HKhRCxHauRRDv1zZeP8MXvAJIQpk1tOHi3cyXNcEAaSYGXH1px9y5q0h6wlmx6IMQhsbK2K5gZdAGQGuoWxryMb2rqHIdTbjh90fNcjnbaZP/MMEvk15rN4BD5hW0aMpaDxpHW8UqutH5ZT1D+av57rIWfkPB7w6J4nVKq1eUFHAVGDW8qwIJmEEU3kE1ycUtzfg5BzowIeS6AxEQr95eRerfoGq75KQXCtLIV4kvGzXFVk9myz55rz76vjA+09PrLgWERig/XfwrpdDWtF8xrjSvSex5JMsghYLp1Tglj3HRK7nl3N9wA6pmnqDvigo65DdN9CHd3sOu0uCnxE2qgGZr8nRNSI53jqr12oiGqnIqq3RC2l2CT2y7zl8FeP7p48+bDTUpl0tyG9vo04ueWzGxrsiDjlSgfE67kJgSUk38O5qDuSzrjANUiTENzdJJIIwv9HmhTTIqaxZyb+9aJo8kP9ogGUELUmdSPwvIqB53Oc3qa+oHjzPneqWr/MW+u5yZXaUyzzYKdfsycc6HJmlUu2aaxsAqbIPF881ZxXWI7Vs+2ek31ez+n+8+7D3dKW83uhvNBcC7mdwLX10MSeyikIUjlFx9QDF3VRO/Q9BH4NhC5VapnOGkm9nMUEF5SZi2y5PHkH2StBIxBpZlHN9Jo9syy6hVNiJesxrcyv1QBcHOBv6tx9SeRzVwErP/NdgRnwKFIH//w6Y2QWKUSzUt3CwzozXmv7WC0AZOGMtwHy4ECOlduMUVlE5ntIDIraVjIz+IPa4swp1lU2n3jOmT2oKZi2WFVLH2+pSmflVj/+sQvgbqLi+aHjhcjWuwg6OgqQq/t229VDYoUdH3kIhVYNm9Y4VUFZZx25xkKdVTXNfjuVOjs3q35bpToVWA3uTbXu/VTr7HLlj3+iXGcfrgzS7At7rti9q2vnW3FmROO7pPgUn06GAmZqCUeQqnh+Gmv5NanVvoEXAhKV7KeL/2lsSjzMDvG6UX/9XxB0+zRbhdHwzBid/Px8fXN6Mvh6dn35/WJYT2QV2Ls2l+0PQZs85NbxGh72ycN/l1d1g/Bi12+yVFdC]]></ATT>
+      <ATT name="Name"><![CDATA[Activity Activity diagram]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <LINK relation="Represented">
+        <REFOBJ>
+          <ID name="User" mc="Standard.ActivityPartition" uid="b9aa7000-3aba-483e-b147-083584cb4e54"/>
+        </REFOBJ>
+        <REFOBJ>
+          <ID name="System" mc="Standard.ActivityPartition" uid="9bf39f42-84a7-4c46-b256-fe1f7b4944f1"/>
+        </REFOBJ>
+        <REFOBJ>
+          <ID name="Initial Node" mc="Standard.InitialNode" uid="61467c62-f0d9-42e4-9d70-c64845fb94ab"/>
+        </REFOBJ>
+      </LINK>
+      <COMP relation="Descriptor">
+        <OBJECT>
+          <ID name="" mc="Infrastructure.Note" uid="31e44bbc-6e55-4ea9-80fb-d61e9c0e267c"/>
+          <ATTRIBUTES>
+            <ATT name="Content"></ATT>
+            <ATT name="MimeType"></ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Model">
+              <FOREIGNID name="description" mc="Infrastructure.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

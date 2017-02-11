@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
-<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="pruebagit" version="4">
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Nitflex" version="4">
   <OBJECT>
-    <ID name="pruebagit" mc="Standard.Package" uid="fe21df7c-fcde-48ed-970e-b72ab6554a3f"/>
+    <ID name="Nitflex" mc="Standard.Package" uid="fe21df7c-fcde-48ed-970e-b72ab6554a3f"/>
     <PID name="PruebaGit" mc="Standard.Project" uid="26a969db-9ffe-48dd-99a9-466f5da5a1da"/>
     <ATTRIBUTES>
       <ATT name="IsInstantiable">false</ATT>
@@ -9,12 +9,15 @@
       <ATT name="IsLeaf">false</ATT>
       <ATT name="IsRoot">false</ATT>
       <ATT name="Visibility">Public</ATT>
-      <ATT name="Name"><![CDATA[pruebagit]]></ATT>
+      <ATT name="Name"><![CDATA[Nitflex]]></ATT>
       <ATT name="status">1970354901745664</ATT>
     </ATTRIBUTES>
     <DEPENDENCIES>
       <COMP relation="OwnedBehavior">
-        <COMPID name="Activity" mc="Standard.Activity" uid="f9812a82-1ab1-469f-a37e-ca2cb94205ae"/>
+        <COMPID name="altaOnline." mc="Standard.Activity" uid="f9812a82-1ab1-469f-a37e-ca2cb94205ae"/>
+        <COMPID name="login" mc="Standard.Activity" uid="afbd293b-e01c-43ac-821a-7591e4e48390"/>
+        <COMPID name="reproduccionDeContenidos" mc="Standard.Activity" uid="4c29350c-5676-4e1c-9178-77659346e004"/>
+        <COMPID name="altaOnline" mc="Standard.BpmnBehavior" uid="480abb58-d7d8-4b48-8ea8-96e6a37bc5f0"/>
       </COMP>
     </DEPENDENCIES>
   </OBJECT>

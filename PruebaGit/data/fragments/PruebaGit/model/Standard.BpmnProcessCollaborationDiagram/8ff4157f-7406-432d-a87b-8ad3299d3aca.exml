@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Process Bpmn Process diagram" version="4">
+  <OBJECT>
+    <ID name="Process Bpmn Process diagram" mc="Standard.BpmnProcessCollaborationDiagram" uid="8ff4157f-7406-432d-a87b-8ad3299d3aca"/>
+    <PID name="altaOnline" mc="Standard.BpmnBehavior" uid="480abb58-d7d8-4b48-8ea8-96e6a37bc5f0"/>
+    <ATTRIBUTES>
+      <ATT name="UiDataVersion">1</ATT>
+      <ATT name="UiData"><![CDATA[eJztU1Fv2jAQ/itW3jEU2KBSSlWSClVlpaJbpT1Vl/jC3Dl2ZJuW/PvZTeiAiiyTqqkPe4pzd9/dd3ffheebXJAn1IYreRac0F5AzifhInnE1BLOnCkgtizwLFB6RXPFUHBFGYeVhpwi41ZpmhS5pCgwR2nN1mlooVWKxqRKCEiUButq0Fk+ddG3lSvadcUVLiA5PCr98EqqF0xCF1+gtiWRkDsuAkq1tjFYcL57EGusScq1EEF3Ena3gDfQO1sKDPZa7De1aHy8oanSSCtsC34RmBQYsm2xy41dYtayyo1LUSMJbmycXDmOL0//YJjBWtiDJrtVO02NaxRgkTkeBzP74k3kyVv8eEAy0Iz+YUtknGXDk0+jrDMa9j53hoM+68B4lHTGwAb901M2gBSaNyHA2GupnuUcEhQHpO6s5nIVTGoKxNMh2596amH3BdHYtBJ4JSOVF8pwT/9ImRapoh9cMI0+w5wbP+r6cxQx5/KnaR8+XcUanh2dOZSo9yU6aLzC18ur8IYKn8Gd2l7Cf3NXf4f6cKLk7IhC4hmdX3y/XD5ML6Lr2XLx7SZ+H9G0ON3dNf4W1I48hv/l8VHk8XVx+966OOr6BTrit/g=]]></ATT>
+      <ATT name="Name"><![CDATA[Process Bpmn Process diagram]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="Descriptor">
+        <OBJECT>
+          <ID name="" mc="Infrastructure.Note" uid="eb095969-69f0-4db9-a342-ddd817f3055c"/>
+          <ATTRIBUTES>
+            <ATT name="Content"></ATT>
+            <ATT name="MimeType"></ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Model">
+              <FOREIGNID name="description" mc="Infrastructure.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>
