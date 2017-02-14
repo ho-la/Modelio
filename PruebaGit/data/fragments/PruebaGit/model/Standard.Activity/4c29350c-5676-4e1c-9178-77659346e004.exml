@@ -121,7 +121,26 @@
                   <ATT name="Name"><![CDATA[Salir de la página]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
-                <DEPENDENCIES></DEPENDENCIES>
+                <DEPENDENCIES>
+                  <COMP relation="Outgoing">
+                    <OBJECT>
+                      <ID name="ControlFlow" mc="Standard.ControlFlow" uid="9e728379-f6ca-4ae0-ad2c-d64cc82a0e5c"/>
+                      <ATTRIBUTES>
+                        <ATT name="Guard"></ATT>
+                        <ATT name="Weight"><![CDATA[1]]></ATT>
+                        <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Target">
+                          <REFOBJ>
+                            <ID name="Activity Final Node" mc="Standard.ActivityFinalNode" uid="b4ac8a62-ab7f-4ef9-8f6a-0b5e2cebb751"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
               </OBJECT>
               <OBJECT>
                 <ID name="Initial Node" mc="Standard.InitialNode" uid="c82e33a1-8beb-4287-9c72-a2e24fa6b599"/>
@@ -187,13 +206,96 @@
                       <DEPENDENCIES>
                         <LINK relation="Target">
                           <REFOBJ>
-                            <ID name="Reproducir desde donde lo dejó" mc="Standard.OpaqueAction" uid="d2565ec0-0f36-41a4-ac2e-1f848378cc04"/>
+                            <ID name="Reanudar vídeo comenzado" mc="Standard.OpaqueAction" uid="d2565ec0-0f36-41a4-ac2e-1f848378cc04"/>
                           </REFOBJ>
                         </LINK>
                       </DEPENDENCIES>
                     </OBJECT>
                   </COMP>
                 </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Tomar decisión" mc="Standard.OpaqueAction" uid="af624361-621a-4724-8f9e-2eab008987c0"/>
+                <ATTRIBUTES>
+                  <ATT name="Body"></ATT>
+                  <ATT name="IsMultipleInstance">false</ATT>
+                  <ATT name="IsCompensation">false</ATT>
+                  <ATT name="Name"><![CDATA[Tomar decisión]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Outgoing">
+                    <OBJECT>
+                      <ID name="ControlFlow" mc="Standard.ControlFlow" uid="21c6612d-09df-4b53-ac18-606c256d4ffd"/>
+                      <ATTRIBUTES>
+                        <ATT name="Guard"></ATT>
+                        <ATT name="Weight"><![CDATA[1]]></ATT>
+                        <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Target">
+                          <REFOBJ>
+                            <ID name="Decision-Merge1" mc="Standard.DecisionMergeNode" uid="93daebca-cac6-438b-9f38-8223d6fbf5e5"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Decision-Merge1" mc="Standard.DecisionMergeNode" uid="93daebca-cac6-438b-9f38-8223d6fbf5e5"/>
+                <ATTRIBUTES>
+                  <ATT name="DecisionKind">ExclusiveDecision</ATT>
+                  <ATT name="DecisionInputBehavior"></ATT>
+                  <ATT name="Name"><![CDATA[Decision-Merge1]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Outgoing">
+                    <OBJECT>
+                      <ID name="ControlFlow" mc="Standard.ControlFlow" uid="676d4348-360d-496a-9f7e-a5b54ad26640"/>
+                      <ATTRIBUTES>
+                        <ATT name="Guard"></ATT>
+                        <ATT name="Weight"><![CDATA[1]]></ATT>
+                        <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Target">
+                          <REFOBJ>
+                            <ID name="Elegir la respuesta" mc="Standard.OpaqueAction" uid="a5c9b58a-b3b1-435c-b741-f72a8c944699"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                    <OBJECT>
+                      <ID name="ControlFlow" mc="Standard.ControlFlow" uid="a60a83e2-6252-4bc0-b39d-acbeb8340058"/>
+                      <ATTRIBUTES>
+                        <ATT name="Guard"></ATT>
+                        <ATT name="Weight"><![CDATA[1]]></ATT>
+                        <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Target">
+                          <REFOBJ>
+                            <ID name="Salir de la página" mc="Standard.OpaqueAction" uid="14180007-c5ef-420a-9b57-50753f5528e0"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Activity Final Node" mc="Standard.ActivityFinalNode" uid="b4ac8a62-ab7f-4ef9-8f6a-0b5e2cebb751"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[Activity Final Node]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
               </OBJECT>
             </COMP>
           </DEPENDENCIES>
@@ -280,7 +382,7 @@
                 <DEPENDENCIES>
                   <COMP relation="Outgoing">
                     <OBJECT>
-                      <ID name="ControlFlow" mc="Standard.ControlFlow" uid="47053e9f-a30f-4ffb-98d0-2429629fcdbc"/>
+                      <ID name="ControlFlow" mc="Standard.ControlFlow" uid="db4cf392-903f-408c-9f6c-560dfd636a6b"/>
                       <ATTRIBUTES>
                         <ATT name="Guard"></ATT>
                         <ATT name="Weight"><![CDATA[1]]></ATT>
@@ -290,7 +392,7 @@
                       <DEPENDENCIES>
                         <LINK relation="Target">
                           <REFOBJ>
-                            <ID name="Elegir la respuesta" mc="Standard.OpaqueAction" uid="a5c9b58a-b3b1-435c-b741-f72a8c944699"/>
+                            <ID name="Tomar decisión" mc="Standard.OpaqueAction" uid="af624361-621a-4724-8f9e-2eab008987c0"/>
                           </REFOBJ>
                         </LINK>
                       </DEPENDENCIES>
@@ -310,7 +412,7 @@
                 <DEPENDENCIES>
                   <COMP relation="Outgoing">
                     <OBJECT>
-                      <ID name="ControlFlow" mc="Standard.ControlFlow" uid="721f28fb-cca1-40a5-9fb1-5672c1c6c312"/>
+                      <ID name="ControlFlow" mc="Standard.ControlFlow" uid="bea9d294-f1e1-4578-8312-efa1c5d94c33"/>
                       <ATTRIBUTES>
                         <ATT name="Guard"></ATT>
                         <ATT name="Weight"><![CDATA[1]]></ATT>
@@ -320,23 +422,7 @@
                       <DEPENDENCIES>
                         <LINK relation="Target">
                           <REFOBJ>
-                            <ID name="Cancelada" mc="Standard.OpaqueAction" uid="e74834ec-8f00-4ec6-aa39-3489a900be13"/>
-                          </REFOBJ>
-                        </LINK>
-                      </DEPENDENCIES>
-                    </OBJECT>
-                    <OBJECT>
-                      <ID name="ControlFlow" mc="Standard.ControlFlow" uid="13bbeeec-9270-4aeb-8ad9-a283430ab076"/>
-                      <ATTRIBUTES>
-                        <ATT name="Guard"></ATT>
-                        <ATT name="Weight"><![CDATA[1]]></ATT>
-                        <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
-                        <ATT name="status">1970354901745664</ATT>
-                      </ATTRIBUTES>
-                      <DEPENDENCIES>
-                        <LINK relation="Target">
-                          <REFOBJ>
-                            <ID name="Fin del vídeo" mc="Standard.AcceptTimeEventAction" uid="2af15a2a-df06-4ad7-9eba-842119aa1fbd"/>
+                            <ID name="Decision-Merge2" mc="Standard.DecisionMergeNode" uid="71fd450d-9953-4815-b4e7-249187771102"/>
                           </REFOBJ>
                         </LINK>
                       </DEPENDENCIES>
@@ -390,18 +476,18 @@
                 </DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="Reproducir desde donde lo dejó" mc="Standard.OpaqueAction" uid="d2565ec0-0f36-41a4-ac2e-1f848378cc04"/>
+                <ID name="Reanudar vídeo comenzado" mc="Standard.OpaqueAction" uid="d2565ec0-0f36-41a4-ac2e-1f848378cc04"/>
                 <ATTRIBUTES>
                   <ATT name="Body"></ATT>
                   <ATT name="IsMultipleInstance">false</ATT>
                   <ATT name="IsCompensation">false</ATT>
-                  <ATT name="Name"><![CDATA[Reproducir desde donde lo dejó]]></ATT>
+                  <ATT name="Name"><![CDATA[Reanudar vídeo comenzado]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <COMP relation="Outgoing">
                     <OBJECT>
-                      <ID name="ControlFlow" mc="Standard.ControlFlow" uid="da8e83e5-a4b9-4e70-9425-2640890eafa3"/>
+                      <ID name="ControlFlow" mc="Standard.ControlFlow" uid="48027b47-32b8-4e2b-917f-277ddf9c8e00"/>
                       <ATTRIBUTES>
                         <ATT name="Guard"></ATT>
                         <ATT name="Weight"><![CDATA[1]]></ATT>
@@ -411,23 +497,7 @@
                       <DEPENDENCIES>
                         <LINK relation="Target">
                           <REFOBJ>
-                            <ID name="Cancelada" mc="Standard.OpaqueAction" uid="e74834ec-8f00-4ec6-aa39-3489a900be13"/>
-                          </REFOBJ>
-                        </LINK>
-                      </DEPENDENCIES>
-                    </OBJECT>
-                    <OBJECT>
-                      <ID name="ControlFlow" mc="Standard.ControlFlow" uid="f7b64b94-5c7e-415e-b365-de2313f9ff6c"/>
-                      <ATTRIBUTES>
-                        <ATT name="Guard"></ATT>
-                        <ATT name="Weight"><![CDATA[1]]></ATT>
-                        <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
-                        <ATT name="status">1970354901745664</ATT>
-                      </ATTRIBUTES>
-                      <DEPENDENCIES>
-                        <LINK relation="Target">
-                          <REFOBJ>
-                            <ID name="Fin del vídeo" mc="Standard.AcceptTimeEventAction" uid="2af15a2a-df06-4ad7-9eba-842119aa1fbd"/>
+                            <ID name="Decision-Merge1" mc="Standard.DecisionMergeNode" uid="ee02ba74-b6ea-4236-a4f6-5a8e32011cb4"/>
                           </REFOBJ>
                         </LINK>
                       </DEPENDENCIES>
@@ -436,18 +506,18 @@
                 </DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="Cancelada" mc="Standard.OpaqueAction" uid="e74834ec-8f00-4ec6-aa39-3489a900be13"/>
+                <ID name="Cancelar visionado" mc="Standard.OpaqueAction" uid="e74834ec-8f00-4ec6-aa39-3489a900be13"/>
                 <ATTRIBUTES>
                   <ATT name="Body"></ATT>
                   <ATT name="IsMultipleInstance">false</ATT>
                   <ATT name="IsCompensation">false</ATT>
-                  <ATT name="Name"><![CDATA[Cancelada]]></ATT>
+                  <ATT name="Name"><![CDATA[Cancelar visionado]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <COMP relation="Outgoing">
                     <OBJECT>
-                      <ID name="ControlFlow" mc="Standard.ControlFlow" uid="d2ced6f5-089d-4b89-98d7-51cd07acd55e"/>
+                      <ID name="ControlFlow" mc="Standard.ControlFlow" uid="d81e8a4c-82aa-4081-8d7e-922ee125e5b4"/>
                       <ATTRIBUTES>
                         <ATT name="Guard"></ATT>
                         <ATT name="Weight"><![CDATA[1]]></ATT>
@@ -457,23 +527,7 @@
                       <DEPENDENCIES>
                         <LINK relation="Target">
                           <REFOBJ>
-                            <ID name="Mostrar página principal" mc="Standard.OpaqueAction" uid="a008e4e7-fedc-4c14-8ac6-f111b0d8fc33"/>
-                          </REFOBJ>
-                        </LINK>
-                      </DEPENDENCIES>
-                    </OBJECT>
-                    <OBJECT>
-                      <ID name="ControlFlow" mc="Standard.ControlFlow" uid="43e55bbb-78ce-495f-bac3-b757fe614c39"/>
-                      <ATTRIBUTES>
-                        <ATT name="Guard"></ATT>
-                        <ATT name="Weight"><![CDATA[1]]></ATT>
-                        <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
-                        <ATT name="status">1970354901745664</ATT>
-                      </ATTRIBUTES>
-                      <DEPENDENCIES>
-                        <LINK relation="Target">
-                          <REFOBJ>
-                            <ID name="Registrar reproducción" mc="Standard.OpaqueAction" uid="9c47922e-9ad3-40cb-9e70-2243d6d2bc21"/>
+                            <ID name="Registrar reproducción cancelada" mc="Standard.OpaqueAction" uid="00e29efd-1983-4244-bf43-f0395f3d7271"/>
                           </REFOBJ>
                         </LINK>
                       </DEPENDENCIES>
@@ -482,18 +536,18 @@
                 </DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="Registrar reproducción" mc="Standard.OpaqueAction" uid="9c47922e-9ad3-40cb-9e70-2243d6d2bc21"/>
+                <ID name="Registrar reproducción finalizada" mc="Standard.OpaqueAction" uid="9c47922e-9ad3-40cb-9e70-2243d6d2bc21"/>
                 <ATTRIBUTES>
                   <ATT name="Body"></ATT>
                   <ATT name="IsMultipleInstance">false</ATT>
                   <ATT name="IsCompensation">false</ATT>
-                  <ATT name="Name"><![CDATA[Registrar reproducción]]></ATT>
+                  <ATT name="Name"><![CDATA[Registrar reproducción finalizada]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <COMP relation="Outgoing">
                     <OBJECT>
-                      <ID name="ControlFlow" mc="Standard.ControlFlow" uid="a065f2be-aee4-46a5-926b-ded1db49750b"/>
+                      <ID name="ControlFlow" mc="Standard.ControlFlow" uid="f9bd8c90-e516-465e-9ffd-6298568d5145"/>
                       <ATTRIBUTES>
                         <ATT name="Guard"></ATT>
                         <ATT name="Weight"><![CDATA[1]]></ATT>
@@ -503,7 +557,7 @@
                       <DEPENDENCIES>
                         <LINK relation="Target">
                           <REFOBJ>
-                            <ID name="Activity Final Node" mc="Standard.ActivityFinalNode" uid="c2012c9e-1ec9-4d0a-98b6-5b947ad37539"/>
+                            <ID name="Ofrecer contenido" mc="Standard.OpaqueAction" uid="39d5e855-295d-4483-bbb1-5aec571f2949"/>
                           </REFOBJ>
                         </LINK>
                       </DEPENDENCIES>
@@ -523,7 +577,7 @@
                 <DEPENDENCIES>
                   <COMP relation="Outgoing">
                     <OBJECT>
-                      <ID name="ControlFlow" mc="Standard.ControlFlow" uid="5c4299cc-ea72-4314-a386-448e16e2313c"/>
+                      <ID name="ControlFlow" mc="Standard.ControlFlow" uid="1d81f706-df37-4f92-968f-5ab1f78cf96d"/>
                       <ATTRIBUTES>
                         <ATT name="Guard"></ATT>
                         <ATT name="Weight"><![CDATA[1]]></ATT>
@@ -533,7 +587,7 @@
                       <DEPENDENCIES>
                         <LINK relation="Target">
                           <REFOBJ>
-                            <ID name="Fork/Join" mc="Standard.ForkJoinNode" uid="3668de35-89d0-462c-87d6-7aa78c5c45f6"/>
+                            <ID name="Registrar reproducción finalizada" mc="Standard.OpaqueAction" uid="9c47922e-9ad3-40cb-9e70-2243d6d2bc21"/>
                           </REFOBJ>
                         </LINK>
                       </DEPENDENCIES>
@@ -553,7 +607,7 @@
                 <DEPENDENCIES>
                   <COMP relation="Outgoing">
                     <OBJECT>
-                      <ID name="ControlFlow" mc="Standard.ControlFlow" uid="e2cea4c8-4b86-4d90-913e-51c7b35aa2de"/>
+                      <ID name="ControlFlow" mc="Standard.ControlFlow" uid="df6d848e-3d69-4103-a1bf-274267fc5963"/>
                       <ATTRIBUTES>
                         <ATT name="Guard"></ATT>
                         <ATT name="Weight"><![CDATA[1]]></ATT>
@@ -572,17 +626,25 @@
                 </DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="Fork/Join" mc="Standard.ForkJoinNode" uid="3668de35-89d0-462c-87d6-7aa78c5c45f6"/>
+                <ID name="Activity Final Node" mc="Standard.ActivityFinalNode" uid="c2012c9e-1ec9-4d0a-98b6-5b947ad37539"/>
                 <ATTRIBUTES>
-                  <ATT name="IsCombineDuplicate">true</ATT>
-                  <ATT name="JoinSpec"><![CDATA[and]]></ATT>
-                  <ATT name="Name"><![CDATA[Fork/Join]]></ATT>
+                  <ATT name="Name"><![CDATA[Activity Final Node]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Decision-Merge1" mc="Standard.DecisionMergeNode" uid="ee02ba74-b6ea-4236-a4f6-5a8e32011cb4"/>
+                <ATTRIBUTES>
+                  <ATT name="DecisionKind">ExclusiveDecision</ATT>
+                  <ATT name="DecisionInputBehavior"></ATT>
+                  <ATT name="Name"><![CDATA[Decision-Merge1]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <COMP relation="Outgoing">
                     <OBJECT>
-                      <ID name="ControlFlow" mc="Standard.ControlFlow" uid="260650fb-28e1-4079-8959-7ffb89e6b1ae"/>
+                      <ID name="ControlFlow" mc="Standard.ControlFlow" uid="5c7efe35-df84-4df3-bc0c-c4d609c4186f"/>
                       <ATTRIBUTES>
                         <ATT name="Guard"></ATT>
                         <ATT name="Weight"><![CDATA[1]]></ATT>
@@ -592,13 +654,13 @@
                       <DEPENDENCIES>
                         <LINK relation="Target">
                           <REFOBJ>
-                            <ID name="Ofrecer contenido" mc="Standard.OpaqueAction" uid="39d5e855-295d-4483-bbb1-5aec571f2949"/>
+                            <ID name="Fin del vídeo" mc="Standard.AcceptTimeEventAction" uid="2af15a2a-df06-4ad7-9eba-842119aa1fbd"/>
                           </REFOBJ>
                         </LINK>
                       </DEPENDENCIES>
                     </OBJECT>
                     <OBJECT>
-                      <ID name="ControlFlow" mc="Standard.ControlFlow" uid="0e321b05-294d-4aa5-bf29-33b5116fbedc"/>
+                      <ID name="ControlFlow" mc="Standard.ControlFlow" uid="6f06fc8c-1598-4429-8774-5b93e088f5e7"/>
                       <ATTRIBUTES>
                         <ATT name="Guard"></ATT>
                         <ATT name="Weight"><![CDATA[1]]></ATT>
@@ -608,7 +670,7 @@
                       <DEPENDENCIES>
                         <LINK relation="Target">
                           <REFOBJ>
-                            <ID name="Registrar reproducción" mc="Standard.OpaqueAction" uid="9c47922e-9ad3-40cb-9e70-2243d6d2bc21"/>
+                            <ID name="Cancelar visionado" mc="Standard.OpaqueAction" uid="e74834ec-8f00-4ec6-aa39-3489a900be13"/>
                           </REFOBJ>
                         </LINK>
                       </DEPENDENCIES>
@@ -617,12 +679,79 @@
                 </DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="Activity Final Node" mc="Standard.ActivityFinalNode" uid="c2012c9e-1ec9-4d0a-98b6-5b947ad37539"/>
+                <ID name="Registrar reproducción cancelada" mc="Standard.OpaqueAction" uid="00e29efd-1983-4244-bf43-f0395f3d7271"/>
                 <ATTRIBUTES>
-                  <ATT name="Name"><![CDATA[Activity Final Node]]></ATT>
+                  <ATT name="Body"></ATT>
+                  <ATT name="IsMultipleInstance">false</ATT>
+                  <ATT name="IsCompensation">false</ATT>
+                  <ATT name="Name"><![CDATA[Registrar reproducción cancelada]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
-                <DEPENDENCIES></DEPENDENCIES>
+                <DEPENDENCIES>
+                  <COMP relation="Outgoing">
+                    <OBJECT>
+                      <ID name="ControlFlow" mc="Standard.ControlFlow" uid="f6d93e1f-3421-49ec-8ecf-eda0f65359bf"/>
+                      <ATTRIBUTES>
+                        <ATT name="Guard"></ATT>
+                        <ATT name="Weight"><![CDATA[1]]></ATT>
+                        <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Target">
+                          <REFOBJ>
+                            <ID name="Mostrar página principal" mc="Standard.OpaqueAction" uid="a008e4e7-fedc-4c14-8ac6-f111b0d8fc33"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Decision-Merge2" mc="Standard.DecisionMergeNode" uid="71fd450d-9953-4815-b4e7-249187771102"/>
+                <ATTRIBUTES>
+                  <ATT name="DecisionKind">ExclusiveDecision</ATT>
+                  <ATT name="DecisionInputBehavior"></ATT>
+                  <ATT name="Name"><![CDATA[Decision-Merge2]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Outgoing">
+                    <OBJECT>
+                      <ID name="ControlFlow" mc="Standard.ControlFlow" uid="65b3f882-9066-4aa6-acbd-1436eec4a2b3"/>
+                      <ATTRIBUTES>
+                        <ATT name="Guard"></ATT>
+                        <ATT name="Weight"><![CDATA[1]]></ATT>
+                        <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Target">
+                          <REFOBJ>
+                            <ID name="Fin del vídeo" mc="Standard.AcceptTimeEventAction" uid="2af15a2a-df06-4ad7-9eba-842119aa1fbd"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                    <OBJECT>
+                      <ID name="ControlFlow" mc="Standard.ControlFlow" uid="b1f5ae60-58f0-4408-8850-518168a86872"/>
+                      <ATTRIBUTES>
+                        <ATT name="Guard"></ATT>
+                        <ATT name="Weight"><![CDATA[1]]></ATT>
+                        <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Target">
+                          <REFOBJ>
+                            <ID name="Cancelar visionado" mc="Standard.OpaqueAction" uid="e74834ec-8f00-4ec6-aa39-3489a900be13"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
               </OBJECT>
             </COMP>
           </DEPENDENCIES>
