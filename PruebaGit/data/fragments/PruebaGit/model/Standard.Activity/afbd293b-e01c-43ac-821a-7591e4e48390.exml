@@ -129,7 +129,7 @@
                 <DEPENDENCIES>
                   <COMP relation="Outgoing">
                     <OBJECT>
-                      <ID name="ControlFlow" mc="Standard.ControlFlow" uid="b73b2d60-a7ca-4bd0-ae09-31d613b60625"/>
+                      <ID name="ControlFlow" mc="Standard.ControlFlow" uid="dbde1d16-0764-437d-b786-6065817c8b04"/>
                       <ATTRIBUTES>
                         <ATT name="Guard"></ATT>
                         <ATT name="Weight"><![CDATA[1]]></ATT>
@@ -139,7 +139,7 @@
                       <DEPENDENCIES>
                         <LINK relation="Target">
                           <REFOBJ>
-                            <ID name="Comprobar nº de intentos" mc="Standard.OpaqueAction" uid="5a60b5c7-b26b-44de-beab-5e8abc4b8d87"/>
+                            <ID name="Comprobar usuario" mc="Standard.OpaqueAction" uid="a44a63f8-47ce-4925-be9c-249d27093712"/>
                           </REFOBJ>
                         </LINK>
                       </DEPENDENCIES>
@@ -352,7 +352,7 @@
                       </DEPENDENCIES>
                     </OBJECT>
                     <OBJECT>
-                      <ID name="ControlFlow" mc="Standard.ControlFlow" uid="85ac007a-49b4-42eb-b40c-e23f139277f1"/>
+                      <ID name="ControlFlow" mc="Standard.ControlFlow" uid="956f9f0a-a751-4a8d-8cc2-27489df5f609"/>
                       <ATTRIBUTES>
                         <ATT name="Guard"><![CDATA[Menor que 3]]></ATT>
                         <ATT name="Weight"><![CDATA[1]]></ATT>
@@ -362,7 +362,7 @@
                       <DEPENDENCIES>
                         <LINK relation="Target">
                           <REFOBJ>
-                            <ID name="Comprobar credenciales" mc="Standard.OpaqueAction" uid="a44a63f8-47ce-4925-be9c-249d27093712"/>
+                            <ID name="Mostrar página de login" mc="Standard.OpaqueAction" uid="1017987d-0e9f-4895-b292-3aba4cd8606f"/>
                           </REFOBJ>
                         </LINK>
                       </DEPENDENCIES>
@@ -371,12 +371,12 @@
                 </DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="Comprobar credenciales" mc="Standard.OpaqueAction" uid="a44a63f8-47ce-4925-be9c-249d27093712"/>
+                <ID name="Comprobar usuario" mc="Standard.OpaqueAction" uid="a44a63f8-47ce-4925-be9c-249d27093712"/>
                 <ATTRIBUTES>
                   <ATT name="Body"></ATT>
                   <ATT name="IsMultipleInstance">false</ATT>
                   <ATT name="IsCompensation">false</ATT>
-                  <ATT name="Name"><![CDATA[Comprobar credenciales]]></ATT>
+                  <ATT name="Name"><![CDATA[Comprobar usuario]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES>
@@ -401,12 +401,12 @@
                 </DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="Comprobar IP" mc="Standard.OpaqueAction" uid="9436a3a5-938a-4781-850e-9ab71144ca0b"/>
+                <ID name="Comprobar IP usuario" mc="Standard.OpaqueAction" uid="9436a3a5-938a-4781-850e-9ab71144ca0b"/>
                 <ATTRIBUTES>
                   <ATT name="Body"></ATT>
                   <ATT name="IsMultipleInstance">false</ATT>
                   <ATT name="IsCompensation">false</ATT>
-                  <ATT name="Name"><![CDATA[Comprobar IP]]></ATT>
+                  <ATT name="Name"><![CDATA[Comprobar IP usuario]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES>
@@ -424,6 +424,22 @@
                           <REFOBJ>
                             <ID name="Decision-Merge2" mc="Standard.DecisionMergeNode" uid="788ac770-2f91-4b1e-954e-851ef95de56f"/>
                           </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                  <COMP relation="Descriptor">
+                    <OBJECT>
+                      <ID name="" mc="Infrastructure.Note" uid="f75d8313-4315-4ad0-8928-dbd83cff0dc0"/>
+                      <ATTRIBUTES>
+                        <ATT name="Content"></ATT>
+                        <ATT name="MimeType"></ATT>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Model">
+                          <FOREIGNID name="description" mc="Infrastructure.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
                         </LINK>
                       </DEPENDENCIES>
                     </OBJECT>
@@ -473,7 +489,7 @@
                     <OBJECT>
                       <ID name="ControlFlow" mc="Standard.ControlFlow" uid="81702bf0-78b4-42a7-bfa0-6f57224a7f40"/>
                       <ATTRIBUTES>
-                        <ATT name="Guard"><![CDATA[Incorrecto]]></ATT>
+                        <ATT name="Guard"><![CDATA[Usuario  inexistente]]></ATT>
                         <ATT name="Weight"><![CDATA[1]]></ATT>
                         <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
                         <ATT name="status">1970354901745664</ATT>
@@ -481,15 +497,15 @@
                       <DEPENDENCIES>
                         <LINK relation="Target">
                           <REFOBJ>
-                            <ID name="Almacenar login incorrecto" mc="Standard.OpaqueAction" uid="1d5889ed-40bd-4877-93ab-35d82510f0a8"/>
+                            <ID name="Almacenar intento de login fallido" mc="Standard.OpaqueAction" uid="1d5889ed-40bd-4877-93ab-35d82510f0a8"/>
                           </REFOBJ>
                         </LINK>
                       </DEPENDENCIES>
                     </OBJECT>
                     <OBJECT>
-                      <ID name="ControlFlow" mc="Standard.ControlFlow" uid="73a1cc93-3ff1-44c7-b725-dc1d9f91fcd7"/>
+                      <ID name="ControlFlow" mc="Standard.ControlFlow" uid="ebfe7bc5-e0e0-47af-9f1c-3c4d275f1ee7"/>
                       <ATTRIBUTES>
-                        <ATT name="Guard"><![CDATA[Correcto]]></ATT>
+                        <ATT name="Guard"><![CDATA[Usuario existe]]></ATT>
                         <ATT name="Weight"><![CDATA[1]]></ATT>
                         <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
                         <ATT name="status">1970354901745664</ATT>
@@ -497,7 +513,7 @@
                       <DEPENDENCIES>
                         <LINK relation="Target">
                           <REFOBJ>
-                            <ID name="Almacenar login correcto" mc="Standard.OpaqueAction" uid="7b156b9d-549c-46d8-93a4-4c3cadfd0ea2"/>
+                            <ID name="Comprobar estado de la cuenta" mc="Standard.OpaqueAction" uid="cdaf94eb-5f74-4e60-bb00-259e6cead29f"/>
                           </REFOBJ>
                         </LINK>
                       </DEPENDENCIES>
@@ -506,12 +522,12 @@
                 </DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="Almacenar login incorrecto" mc="Standard.OpaqueAction" uid="1d5889ed-40bd-4877-93ab-35d82510f0a8"/>
+                <ID name="Almacenar intento de login fallido" mc="Standard.OpaqueAction" uid="1d5889ed-40bd-4877-93ab-35d82510f0a8"/>
                 <ATTRIBUTES>
                   <ATT name="Body"></ATT>
                   <ATT name="IsMultipleInstance">false</ATT>
                   <ATT name="IsCompensation">false</ATT>
-                  <ATT name="Name"><![CDATA[Almacenar login incorrecto]]></ATT>
+                  <ATT name="Name"><![CDATA[Almacenar intento de login fallido]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES>
@@ -640,7 +656,233 @@
                       <DEPENDENCIES>
                         <LINK relation="Target">
                           <REFOBJ>
-                            <ID name="Comprobar IP" mc="Standard.OpaqueAction" uid="9436a3a5-938a-4781-850e-9ab71144ca0b"/>
+                            <ID name="Comprobar IP usuario" mc="Standard.OpaqueAction" uid="9436a3a5-938a-4781-850e-9ab71144ca0b"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                  <COMP relation="Descriptor">
+                    <OBJECT>
+                      <ID name="" mc="Infrastructure.Note" uid="57bf78d7-4e53-4a81-b2d9-99b00b3c074d"/>
+                      <ATTRIBUTES>
+                        <ATT name="Content"><![CDATA[<Enter note text here>]]></ATT>
+                        <ATT name="MimeType"></ATT>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Model">
+                          <FOREIGNID name="description" mc="Infrastructure.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Comprobar estado de la cuenta" mc="Standard.OpaqueAction" uid="cdaf94eb-5f74-4e60-bb00-259e6cead29f"/>
+                <ATTRIBUTES>
+                  <ATT name="Body"></ATT>
+                  <ATT name="IsMultipleInstance">false</ATT>
+                  <ATT name="IsCompensation">false</ATT>
+                  <ATT name="Name"><![CDATA[Comprobar estado de la cuenta]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Outgoing">
+                    <OBJECT>
+                      <ID name="ControlFlow" mc="Standard.ControlFlow" uid="797ca9bb-29d9-499c-be80-032bbd30b82f"/>
+                      <ATTRIBUTES>
+                        <ATT name="Guard"></ATT>
+                        <ATT name="Weight"><![CDATA[1]]></ATT>
+                        <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Target">
+                          <REFOBJ>
+                            <ID name="Decision-Merge3" mc="Standard.DecisionMergeNode" uid="5d5015e6-f226-4b57-ad14-641e7cd062e8"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Decision-Merge3" mc="Standard.DecisionMergeNode" uid="5d5015e6-f226-4b57-ad14-641e7cd062e8"/>
+                <ATTRIBUTES>
+                  <ATT name="DecisionKind">ExclusiveDecision</ATT>
+                  <ATT name="DecisionInputBehavior"></ATT>
+                  <ATT name="Name"><![CDATA[Decision-Merge3]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Outgoing">
+                    <OBJECT>
+                      <ID name="ControlFlow" mc="Standard.ControlFlow" uid="6f8d6db5-69a2-4ee1-ac18-d9f520594aef"/>
+                      <ATTRIBUTES>
+                        <ATT name="Guard"><![CDATA[Cuenta bloqueada]]></ATT>
+                        <ATT name="Weight"><![CDATA[1]]></ATT>
+                        <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Target">
+                          <REFOBJ>
+                            <ID name="Almacenar intento de login fallido" mc="Standard.OpaqueAction" uid="1d5889ed-40bd-4877-93ab-35d82510f0a8"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                    <OBJECT>
+                      <ID name="ControlFlow" mc="Standard.ControlFlow" uid="d26a3471-51f9-4498-bd94-fdeb218d5c9e"/>
+                      <ATTRIBUTES>
+                        <ATT name="Guard"><![CDATA[Cuenta no bloqueada]]></ATT>
+                        <ATT name="Weight"><![CDATA[1]]></ATT>
+                        <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Target">
+                          <REFOBJ>
+                            <ID name="Comprobar contraseña" mc="Standard.OpaqueAction" uid="4fda6e71-a210-4334-a37c-2334fed14b95"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Comprobar contraseña" mc="Standard.OpaqueAction" uid="4fda6e71-a210-4334-a37c-2334fed14b95"/>
+                <ATTRIBUTES>
+                  <ATT name="Body"></ATT>
+                  <ATT name="IsMultipleInstance">false</ATT>
+                  <ATT name="IsCompensation">false</ATT>
+                  <ATT name="Name"><![CDATA[Comprobar contraseña]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Outgoing">
+                    <OBJECT>
+                      <ID name="ControlFlow" mc="Standard.ControlFlow" uid="f79833f8-8d7a-4088-9959-66949ed226e4"/>
+                      <ATTRIBUTES>
+                        <ATT name="Guard"></ATT>
+                        <ATT name="Weight"><![CDATA[1]]></ATT>
+                        <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Target">
+                          <REFOBJ>
+                            <ID name="Decision-Merge4" mc="Standard.DecisionMergeNode" uid="977ec737-bff7-45a1-baf3-94159a0fc587"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Decision-Merge4" mc="Standard.DecisionMergeNode" uid="977ec737-bff7-45a1-baf3-94159a0fc587"/>
+                <ATTRIBUTES>
+                  <ATT name="DecisionKind">ExclusiveDecision</ATT>
+                  <ATT name="DecisionInputBehavior"></ATT>
+                  <ATT name="Name"><![CDATA[Decision-Merge4]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Outgoing">
+                    <OBJECT>
+                      <ID name="ControlFlow" mc="Standard.ControlFlow" uid="cb538f86-eaee-4899-ba83-83b35c482e90"/>
+                      <ATTRIBUTES>
+                        <ATT name="Guard"><![CDATA[Incorrecta]]></ATT>
+                        <ATT name="Weight"><![CDATA[1]]></ATT>
+                        <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Target">
+                          <REFOBJ>
+                            <ID name="Almacenar  intento de  login usuario" mc="Standard.OpaqueAction" uid="c64790bb-38a9-42bd-a710-051d5e453d9b"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                    <OBJECT>
+                      <ID name="ControlFlow" mc="Standard.ControlFlow" uid="ff945d30-7dae-4168-a67f-e58710de2425"/>
+                      <ATTRIBUTES>
+                        <ATT name="Guard"><![CDATA[Correcta]]></ATT>
+                        <ATT name="Weight"><![CDATA[1]]></ATT>
+                        <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Target">
+                          <REFOBJ>
+                            <ID name="Almacenar login correcto" mc="Standard.OpaqueAction" uid="7b156b9d-549c-46d8-93a4-4c3cadfd0ea2"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Almacenar  intento de  login usuario" mc="Standard.OpaqueAction" uid="c64790bb-38a9-42bd-a710-051d5e453d9b"/>
+                <ATTRIBUTES>
+                  <ATT name="Body"></ATT>
+                  <ATT name="IsMultipleInstance">false</ATT>
+                  <ATT name="IsCompensation">false</ATT>
+                  <ATT name="Name"><![CDATA[Almacenar  intento de  login usuario]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Outgoing">
+                    <OBJECT>
+                      <ID name="ControlFlow" mc="Standard.ControlFlow" uid="c08c4de4-5b6a-43ac-8276-19b74148e5be"/>
+                      <ATTRIBUTES>
+                        <ATT name="Guard"></ATT>
+                        <ATT name="Weight"><![CDATA[1]]></ATT>
+                        <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Target">
+                          <REFOBJ>
+                            <ID name="Incrementar nº de intentos usuario" mc="Standard.OpaqueAction" uid="3e4ec61e-9fbf-4a1c-9668-5df0f3e3a3a9"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Incrementar nº de intentos usuario" mc="Standard.OpaqueAction" uid="3e4ec61e-9fbf-4a1c-9668-5df0f3e3a3a9"/>
+                <ATTRIBUTES>
+                  <ATT name="Body"></ATT>
+                  <ATT name="IsMultipleInstance">false</ATT>
+                  <ATT name="IsCompensation">false</ATT>
+                  <ATT name="Name"><![CDATA[Incrementar nº de intentos usuario]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Outgoing">
+                    <OBJECT>
+                      <ID name="ControlFlow" mc="Standard.ControlFlow" uid="85637c11-fa1f-4723-8257-cf6fa24db86b"/>
+                      <ATTRIBUTES>
+                        <ATT name="Guard"></ATT>
+                        <ATT name="Weight"><![CDATA[1]]></ATT>
+                        <ATT name="Name"><![CDATA[ControlFlow]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Target">
+                          <REFOBJ>
+                            <ID name="Comprobar nº de intentos" mc="Standard.OpaqueAction" uid="5a60b5c7-b26b-44de-beab-5e8abc4b8d87"/>
                           </REFOBJ>
                         </LINK>
                       </DEPENDENCIES>
