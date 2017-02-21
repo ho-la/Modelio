@@ -27,75 +27,7 @@
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <COMP relation="Lane">
-                    <OBJECT>
-                      <ID name="System" mc="Standard.BpmnLane" uid="a042b83f-e37a-4c69-91ff-6725100ab01a"/>
-                      <ATTRIBUTES>
-                        <ATT name="Name"><![CDATA[System]]></ATT>
-                        <ATT name="status">1970354901745664</ATT>
-                      </ATTRIBUTES>
-                      <DEPENDENCIES>
-                        <LINK relation="FlowElementRef">
-                          <REFOBJ>
-                            <ID name="Analizar credenciales" mc="Standard.BpmnUserTask" uid="748d4a70-9f8a-45f3-8fc1-3ca58d59926b"/>
-                          </REFOBJ>
-                          <REFOBJ>
-                            <ID name="Solicitud de registro" mc="Standard.BpmnStartEvent" uid="4a991bbe-e443-402e-94f5-159d948899a3"/>
-                          </REFOBJ>
-                          <REFOBJ>
-                            <ID name="Comprobar nombre" mc="Standard.BpmnServiceTask" uid="07fb3d38-bdc6-4172-a76e-724cc74c9a1f"/>
-                          </REFOBJ>
-                          <REFOBJ>
-                            <ID name="Nombre existe?" mc="Standard.BpmnExclusiveGateway" uid="6919d311-a846-46d2-8f97-57762672f156"/>
-                          </REFOBJ>
-                          <REFOBJ>
-                            <ID name="Mostrar sugerencias" mc="Standard.BpmnServiceTask" uid="86eb0d9a-0f0b-42aa-bc61-598f268a2a3d"/>
-                          </REFOBJ>
-                          <REFOBJ>
-                            <ID name="Enviar pagina de registro de datos" mc="Standard.BpmnServiceTask" uid="85dc6b00-b23d-418d-a136-2e5c8d9124a7"/>
-                          </REFOBJ>
-                          <REFOBJ>
-                            <ID name="Comprobar datos" mc="Standard.BpmnServiceTask" uid="dc440dd8-3143-4574-8e2b-a6ed96bcb1b5"/>
-                          </REFOBJ>
-                          <REFOBJ>
-                            <ID name="Recibir datos" mc="Standard.BpmnIntermediateCatchEvent" uid="15fdaead-830c-45dd-9d5b-810fca5e4f76"/>
-                          </REFOBJ>
-                          <REFOBJ>
-                            <ID name="Correctos?" mc="Standard.BpmnExclusiveGateway" uid="1c22a0c0-77e9-4987-9e31-8e407edce1d5"/>
-                          </REFOBJ>
-                          <REFOBJ>
-                            <ID name="Mostrar errores" mc="Standard.BpmnServiceTask" uid="8786eb61-7b9c-4dc4-9bfd-9f613717d585"/>
-                          </REFOBJ>
-                          <REFOBJ>
-                            <ID name="Enviar pagina de registro de datos de pago" mc="Standard.BpmnServiceTask" uid="f9dba853-88d9-4258-ad5d-e874c475c735"/>
-                          </REFOBJ>
-                          <REFOBJ>
-                            <ID name="Recibir datos de pago" mc="Standard.BpmnIntermediateCatchEvent" uid="4da006da-c3ba-40fd-965c-878b1f1b60aa"/>
-                          </REFOBJ>
-                          <REFOBJ>
-                            <ID name="Realizar cobro del mes" mc="Standard.BpmnServiceTask" uid="29bcb717-5ff4-4363-8370-d1d7fd308b42"/>
-                          </REFOBJ>
-                          <REFOBJ>
-                            <ID name="Cobro exitoso?" mc="Standard.BpmnExclusiveGateway" uid="fa04240d-880c-4037-af78-a3e851f4f97b"/>
-                          </REFOBJ>
-                          <REFOBJ>
-                            <ID name="Mostrar errores de pago" mc="Standard.BpmnServiceTask" uid="7b34c998-ab53-4a58-80ce-f135eaee908a"/>
-                          </REFOBJ>
-                          <REFOBJ>
-                            <ID name="Poner temporizador proximo mes" mc="Standard.BpmnServiceTask" uid="23d074ca-31ac-4534-8931-90b27cd8f0fc"/>
-                          </REFOBJ>
-                          <REFOBJ>
-                            <ID name="Almacenar datos" mc="Standard.BpmnServiceTask" uid="5facbf5f-2dd1-44dd-90b6-52555de254af"/>
-                          </REFOBJ>
-                          <REFOBJ>
-                            <ID name="Enviar pagina principal" mc="Standard.BpmnEndEvent" uid="6a9d7295-9122-4d93-a105-35fd5179e4a3"/>
-                          </REFOBJ>
-                        </LINK>
-                      </DEPENDENCIES>
-                    </OBJECT>
-                  </COMP>
-                </DEPENDENCIES>
+                <DEPENDENCIES></DEPENDENCIES>
               </OBJECT>
               <OBJECT>
                 <ID name="" mc="Standard.BpmnLaneSet" uid="38e0ed73-fc8a-4990-91f0-b08ed3be746b"/>
@@ -103,44 +35,160 @@
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="Standard.BpmnLaneSet" uid="5c0f7bcc-389c-41ea-9828-e42bbbd9feb6"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
                 <DEPENDENCIES>
                   <COMP relation="Lane">
                     <OBJECT>
-                      <ID name="User" mc="Standard.BpmnLane" uid="865db905-465d-4af7-9443-a1024f3e76e8"/>
+                      <ID name="Login" mc="Standard.BpmnLane" uid="54e15a0f-4d3f-4a28-ac1c-76de40003871"/>
                       <ATTRIBUTES>
-                        <ATT name="Name"><![CDATA[User]]></ATT>
+                        <ATT name="Name"><![CDATA[Login]]></ATT>
                         <ATT name="status">1970354901745664</ATT>
                       </ATTRIBUTES>
                       <DEPENDENCIES>
-                        <LINK relation="FlowElementRef">
-                          <REFOBJ>
-                            <ID name="Introducir credenciales" mc="Standard.BpmnUserTask" uid="617d5dba-1a23-48a8-b67b-eea75b12ebac"/>
-                          </REFOBJ>
-                          <REFOBJ>
-                            <ID name="Inicio" mc="Standard.BpmnStartEvent" uid="216b43ee-fcf1-42c8-9cac-a89a7dd7a1f6"/>
-                          </REFOBJ>
-                          <REFOBJ>
-                            <ID name="Recibir formulario datos" mc="Standard.BpmnIntermediateCatchEvent" uid="1ab0c7ab-6c2a-4c73-8461-561674f8662a"/>
-                          </REFOBJ>
-                          <REFOBJ>
-                            <ID name="Introducir datos" mc="Standard.BpmnUserTask" uid="bc06a13d-5be2-4106-9b9a-75f2f09c1a95"/>
-                          </REFOBJ>
-                          <REFOBJ>
-                            <ID name="Recibir pagina de registro de pago" mc="Standard.BpmnIntermediateCatchEvent" uid="96d87038-da00-43d4-bc79-1f8006d5c296"/>
-                          </REFOBJ>
-                          <REFOBJ>
-                            <ID name="Introducir datos de pago" mc="Standard.BpmnUserTask" uid="de981958-a5f2-4896-97d3-f08f34ab8742"/>
-                          </REFOBJ>
-                          <REFOBJ>
-                            <ID name="Recibir pagina principal" mc="Standard.BpmnEndEvent" uid="f20f099e-0423-4d60-8556-38d0e99d7899"/>
-                          </REFOBJ>
-                          <REFOBJ>
-                            <ID name="Solicitar pagina de registro" mc="Standard.BpmnServiceTask" uid="99a6b98b-df04-4c55-919f-769c7275b8b6"/>
-                          </REFOBJ>
-                          <REFOBJ>
-                            <ID name="Recibir pagina de registro" mc="Standard.BpmnIntermediateCatchEvent" uid="b5061f7b-263d-4e64-b30c-ebcdc0dfcb15"/>
-                          </REFOBJ>
-                        </LINK>
+                        <COMP relation="ChildLaneSet">
+                          <OBJECT>
+                            <ID name="" mc="Standard.BpmnLaneSet" uid="70ca188a-46a2-4e85-b14d-dc2cbe777922"/>
+                            <ATTRIBUTES>
+                              <ATT name="Name"></ATT>
+                              <ATT name="status">1970354901745664</ATT>
+                            </ATTRIBUTES>
+                            <DEPENDENCIES>
+                              <COMP relation="Lane">
+                                <OBJECT>
+                                  <ID name="System" mc="Standard.BpmnLane" uid="2fd2899c-8e9d-4a08-ac90-a74b1ea9c417"/>
+                                  <ATTRIBUTES>
+                                    <ATT name="Name"><![CDATA[System]]></ATT>
+                                    <ATT name="status">1970354901745664</ATT>
+                                  </ATTRIBUTES>
+                                  <DEPENDENCIES>
+                                    <LINK relation="FlowElementRef">
+                                      <REFOBJ>
+                                        <ID name="Mostrar página de registro" mc="Standard.BpmnServiceTask" uid="954a6432-ecab-495d-8daf-9b71572837c8"/>
+                                      </REFOBJ>
+                                      <REFOBJ>
+                                        <ID name="" mc="Standard.BpmnIntermediateCatchEvent" uid="b5061f7b-263d-4e64-b30c-ebcdc0dfcb15"/>
+                                      </REFOBJ>
+                                      <REFOBJ>
+                                        <ID name="Mostrar sugerencias" mc="Standard.BpmnServiceTask" uid="86eb0d9a-0f0b-42aa-bc61-598f268a2a3d"/>
+                                      </REFOBJ>
+                                      <REFOBJ>
+                                        <ID name="Comprobar nombre" mc="Standard.BpmnServiceTask" uid="07fb3d38-bdc6-4172-a76e-724cc74c9a1f"/>
+                                      </REFOBJ>
+                                      <REFOBJ>
+                                        <ID name="Nombre existe?" mc="Standard.BpmnExclusiveGateway" uid="6919d311-a846-46d2-8f97-57762672f156"/>
+                                      </REFOBJ>
+                                      <REFOBJ>
+                                        <ID name="Mostrar pagina de registro de datos" mc="Standard.BpmnServiceTask" uid="85dc6b00-b23d-418d-a136-2e5c8d9124a7"/>
+                                      </REFOBJ>
+                                      <REFOBJ>
+                                        <ID name="Recibir credenciales" mc="Standard.BpmnIntermediateCatchEvent" uid="1ab0c7ab-6c2a-4c73-8461-561674f8662a"/>
+                                      </REFOBJ>
+                                      <REFOBJ>
+                                        <ID name="Recibir datos" mc="Standard.BpmnIntermediateCatchEvent" uid="4325ecb3-c782-413c-9c98-f9300989b00d"/>
+                                      </REFOBJ>
+                                      <REFOBJ>
+                                        <ID name="Mostrar pagina de registro de datos de pago" mc="Standard.BpmnServiceTask" uid="f9dba853-88d9-4258-ad5d-e874c475c735"/>
+                                      </REFOBJ>
+                                      <REFOBJ>
+                                        <ID name="Mostrar errores" mc="Standard.BpmnServiceTask" uid="8786eb61-7b9c-4dc4-9bfd-9f613717d585"/>
+                                      </REFOBJ>
+                                      <REFOBJ>
+                                        <ID name="Correctos?" mc="Standard.BpmnExclusiveGateway" uid="1c22a0c0-77e9-4987-9e31-8e407edce1d5"/>
+                                      </REFOBJ>
+                                      <REFOBJ>
+                                        <ID name="Comprobar datos" mc="Standard.BpmnServiceTask" uid="dc440dd8-3143-4574-8e2b-a6ed96bcb1b5"/>
+                                      </REFOBJ>
+                                      <REFOBJ>
+                                        <ID name="Recibir datos de pago" mc="Standard.BpmnIntermediateCatchEvent" uid="57b60ae0-e545-4063-b4bd-c1a7f2058ee8"/>
+                                      </REFOBJ>
+                                      <REFOBJ>
+                                        <ID name="Realizar cobro del mes" mc="Standard.BpmnServiceTask" uid="29bcb717-5ff4-4363-8370-d1d7fd308b42"/>
+                                      </REFOBJ>
+                                      <REFOBJ>
+                                        <ID name="Cobro exitoso?" mc="Standard.BpmnExclusiveGateway" uid="fa04240d-880c-4037-af78-a3e851f4f97b"/>
+                                      </REFOBJ>
+                                      <REFOBJ>
+                                        <ID name="Poner temporizador proximo mes" mc="Standard.BpmnServiceTask" uid="23d074ca-31ac-4534-8931-90b27cd8f0fc"/>
+                                      </REFOBJ>
+                                      <REFOBJ>
+                                        <ID name="Mostrar errores de pago" mc="Standard.BpmnServiceTask" uid="7b34c998-ab53-4a58-80ce-f135eaee908a"/>
+                                      </REFOBJ>
+                                      <REFOBJ>
+                                        <ID name="Almacenar datos" mc="Standard.BpmnServiceTask" uid="5facbf5f-2dd1-44dd-90b6-52555de254af"/>
+                                      </REFOBJ>
+                                      <REFOBJ>
+                                        <ID name="Enviar página principal" mc="Standard.BpmnIntermediateThrowEvent" uid="d2f697c0-a733-4689-aa80-677f80ad7f57"/>
+                                      </REFOBJ>
+                                    </LINK>
+                                  </DEPENDENCIES>
+                                </OBJECT>
+                                <OBJECT>
+                                  <ID name="User" mc="Standard.BpmnLane" uid="d33d7da7-0d7c-47f1-86b4-18a7dbd54927"/>
+                                  <ATTRIBUTES>
+                                    <ATT name="Name"><![CDATA[User]]></ATT>
+                                    <ATT name="status">1970354901745664</ATT>
+                                  </ATTRIBUTES>
+                                  <DEPENDENCIES>
+                                    <LINK relation="FlowElementRef">
+                                      <REFOBJ>
+                                        <ID name="Solicitar página de registro" mc="Standard.BpmnStartEvent" uid="216b43ee-fcf1-42c8-9cac-a89a7dd7a1f6"/>
+                                      </REFOBJ>
+                                      <REFOBJ>
+                                        <ID name="Introducir credenciales" mc="Standard.BpmnUserTask" uid="617d5dba-1a23-48a8-b67b-eea75b12ebac"/>
+                                      </REFOBJ>
+                                      <REFOBJ>
+                                        <ID name="Enviar credenciales" mc="Standard.BpmnIntermediateThrowEvent" uid="1fcc7e28-0f92-4e4b-8b30-675e42227192"/>
+                                      </REFOBJ>
+                                      <REFOBJ>
+                                        <ID name="Introducir datos" mc="Standard.BpmnUserTask" uid="bc06a13d-5be2-4106-9b9a-75f2f09c1a95"/>
+                                      </REFOBJ>
+                                      <REFOBJ>
+                                        <ID name="Enviar datos" mc="Standard.BpmnIntermediateThrowEvent" uid="45bc6342-5f02-43bf-82d3-2e1c006df4e5"/>
+                                      </REFOBJ>
+                                      <REFOBJ>
+                                        <ID name="Introducir datos de pago" mc="Standard.BpmnUserTask" uid="de981958-a5f2-4896-97d3-f08f34ab8742"/>
+                                      </REFOBJ>
+                                      <REFOBJ>
+                                        <ID name="Enviar datos de pago" mc="Standard.BpmnIntermediateThrowEvent" uid="24063870-413e-4505-9154-ea777efc9cac"/>
+                                      </REFOBJ>
+                                      <REFOBJ>
+                                        <ID name="Recibir pagina principal" mc="Standard.BpmnEndEvent" uid="f20f099e-0423-4d60-8556-38d0e99d7899"/>
+                                      </REFOBJ>
+                                      <REFOBJ>
+                                        <ID name="Se va de la página d registro" mc="Standard.BpmnEndEvent" uid="bbe459cb-6642-4a21-9278-d89a2337e92e"/>
+                                      </REFOBJ>
+                                      <REFOBJ>
+                                        <ID name="Recibir página de registro de credenciales" mc="Standard.BpmnIntermediateCatchEvent" uid="e0d7b41f-eba4-4f6d-9d98-4835b74df9b5"/>
+                                      </REFOBJ>
+                                      <REFOBJ>
+                                        <ID name="Decide introducir credenciales?" mc="Standard.BpmnExclusiveGateway" uid="366f614c-3d58-43e5-a224-47f43124375f"/>
+                                      </REFOBJ>
+                                      <REFOBJ>
+                                        <ID name="Recibir página de registro de datos" mc="Standard.BpmnIntermediateCatchEvent" uid="80c30a9f-ff3c-4f49-a48b-003552583801"/>
+                                      </REFOBJ>
+                                      <REFOBJ>
+                                        <ID name="Decide introducir datos?" mc="Standard.BpmnExclusiveGateway" uid="06bca88a-f02f-41c8-8445-ce31caaa4f1a"/>
+                                      </REFOBJ>
+                                      <REFOBJ>
+                                        <ID name="Decide introducir datos de pago?" mc="Standard.BpmnExclusiveGateway" uid="b05ba72c-165a-4f99-84fd-cb4a61a818ba"/>
+                                      </REFOBJ>
+                                      <REFOBJ>
+                                        <ID name="Recibir página de registro de datos de pago" mc="Standard.BpmnIntermediateCatchEvent" uid="a8dc7219-e55f-42a9-a1aa-675da3221c45"/>
+                                      </REFOBJ>
+                                    </LINK>
+                                  </DEPENDENCIES>
+                                </OBJECT>
+                              </COMP>
+                            </DEPENDENCIES>
+                          </OBJECT>
+                        </COMP>
                       </DEPENDENCIES>
                     </OBJECT>
                   </COMP>
@@ -148,161 +196,6 @@
               </OBJECT>
             </COMP>
             <COMP relation="FlowElement">
-              <OBJECT>
-                <ID name="Analizar credenciales" mc="Standard.BpmnUserTask" uid="748d4a70-9f8a-45f3-8fc1-3ca58d59926b"/>
-                <ATTRIBUTES>
-                  <ATT name="Implementation"><![CDATA[##WebService]]></ATT>
-                  <ATT name="IsGlobal">false</ATT>
-                  <ATT name="IsForCompensation">false</ATT>
-                  <ATT name="StartQuantity">1</ATT>
-                  <ATT name="CompletionQuantity">1</ATT>
-                  <ATT name="TriggeredByEvent">false</ATT>
-                  <ATT name="Name"><![CDATA[Analizar credenciales]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES></DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="Introducir credenciales" mc="Standard.BpmnUserTask" uid="617d5dba-1a23-48a8-b67b-eea75b12ebac"/>
-                <ATTRIBUTES>
-                  <ATT name="Implementation"><![CDATA[##WebService]]></ATT>
-                  <ATT name="IsGlobal">false</ATT>
-                  <ATT name="IsForCompensation">false</ATT>
-                  <ATT name="StartQuantity">1</ATT>
-                  <ATT name="CompletionQuantity">1</ATT>
-                  <ATT name="TriggeredByEvent">false</ATT>
-                  <ATT name="Name"><![CDATA[Introducir credenciales]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <COMP relation="DependsOnDependency">
-                    <OBJECT>
-                      <ID name="Envio de credenciales" mc="Infrastructure.Dependency" uid="403e15a3-4446-4758-8c01-2f2f60e1570f"/>
-                      <ATTRIBUTES>
-                        <ATT name="Name"><![CDATA[Envio de credenciales]]></ATT>
-                        <ATT name="status">1970354901745664</ATT>
-                      </ATTRIBUTES>
-                      <DEPENDENCIES>
-                        <LINK relation="DependsOn">
-                          <REFOBJ>
-                            <ID name="Analizar credenciales" mc="Standard.BpmnUserTask" uid="748d4a70-9f8a-45f3-8fc1-3ca58d59926b"/>
-                          </REFOBJ>
-                        </LINK>
-                      </DEPENDENCIES>
-                    </OBJECT>
-                  </COMP>
-                </DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="Inicio" mc="Standard.BpmnStartEvent" uid="216b43ee-fcf1-42c8-9cac-a89a7dd7a1f6"/>
-                <ATTRIBUTES>
-                  <ATT name="IsInterrupting">false</ATT>
-                  <ATT name="ParallelMultiple">false</ATT>
-                  <ATT name="TriggeredByEvent">false</ATT>
-                  <ATT name="Name"><![CDATA[Inicio]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES></DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="Solicitud de registro" mc="Standard.BpmnStartEvent" uid="4a991bbe-e443-402e-94f5-159d948899a3"/>
-                <ATTRIBUTES>
-                  <ATT name="IsInterrupting">false</ATT>
-                  <ATT name="ParallelMultiple">false</ATT>
-                  <ATT name="TriggeredByEvent">false</ATT>
-                  <ATT name="Name"><![CDATA[Solicitud de registro]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <COMP relation="EventDefinitions">
-                    <OBJECT>
-                      <ID name="BpmnMessageEventDefinition" mc="Standard.BpmnMessageEventDefinition" uid="ae2d32f8-3998-4463-a986-098e38b543df"/>
-                      <ATTRIBUTES>
-                        <ATT name="Name"><![CDATA[BpmnMessageEventDefinition]]></ATT>
-                        <ATT name="status">1970354901745664</ATT>
-                      </ATTRIBUTES>
-                      <DEPENDENCIES></DEPENDENCIES>
-                    </OBJECT>
-                  </COMP>
-                </DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="Comprobar nombre" mc="Standard.BpmnServiceTask" uid="07fb3d38-bdc6-4172-a76e-724cc74c9a1f"/>
-                <ATTRIBUTES>
-                  <ATT name="Implementation"><![CDATA[##WebService]]></ATT>
-                  <ATT name="IsGlobal">false</ATT>
-                  <ATT name="IsForCompensation">false</ATT>
-                  <ATT name="StartQuantity">1</ATT>
-                  <ATT name="CompletionQuantity">1</ATT>
-                  <ATT name="TriggeredByEvent">false</ATT>
-                  <ATT name="Name"><![CDATA[Comprobar nombre]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES></DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="Sequence Flow" mc="Standard.BpmnSequenceFlow" uid="747fbea4-8962-4f18-a2d8-ab35d36d98c6"/>
-                <ATTRIBUTES>
-                  <ATT name="IsImmediate">false</ATT>
-                  <ATT name="ConditionExpression"></ATT>
-                  <ATT name="TriggeredByEvent">false</ATT>
-                  <ATT name="Name"><![CDATA[Sequence Flow]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="SourceRef">
-                    <REFOBJ>
-                      <ID name="Analizar credenciales" mc="Standard.BpmnUserTask" uid="748d4a70-9f8a-45f3-8fc1-3ca58d59926b"/>
-                    </REFOBJ>
-                  </LINK>
-                  <LINK relation="TargetRef">
-                    <REFOBJ>
-                      <ID name="Comprobar nombre" mc="Standard.BpmnServiceTask" uid="07fb3d38-bdc6-4172-a76e-724cc74c9a1f"/>
-                    </REFOBJ>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="Nombre existe?" mc="Standard.BpmnExclusiveGateway" uid="6919d311-a846-46d2-8f97-57762672f156"/>
-                <ATTRIBUTES>
-                  <ATT name="GatewayDirection">UnspecifiedDirection</ATT>
-                  <ATT name="TriggeredByEvent">false</ATT>
-                  <ATT name="Name"><![CDATA[Nombre existe?]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES></DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="Mostrar sugerencias" mc="Standard.BpmnServiceTask" uid="86eb0d9a-0f0b-42aa-bc61-598f268a2a3d"/>
-                <ATTRIBUTES>
-                  <ATT name="Implementation"><![CDATA[##WebService]]></ATT>
-                  <ATT name="IsGlobal">false</ATT>
-                  <ATT name="IsForCompensation">false</ATT>
-                  <ATT name="StartQuantity">1</ATT>
-                  <ATT name="CompletionQuantity">1</ATT>
-                  <ATT name="TriggeredByEvent">false</ATT>
-                  <ATT name="Name"><![CDATA[Mostrar sugerencias]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <COMP relation="DependsOnDependency">
-                    <OBJECT>
-                      <ID name="" mc="Infrastructure.Dependency" uid="ffc427fb-3532-4ab9-8252-1c27e0b63d64"/>
-                      <ATTRIBUTES>
-                        <ATT name="Name"></ATT>
-                        <ATT name="status">1970354901745664</ATT>
-                      </ATTRIBUTES>
-                      <DEPENDENCIES>
-                        <LINK relation="DependsOn">
-                          <REFOBJ>
-                            <ID name="Introducir credenciales" mc="Standard.BpmnUserTask" uid="617d5dba-1a23-48a8-b67b-eea75b12ebac"/>
-                          </REFOBJ>
-                        </LINK>
-                      </DEPENDENCIES>
-                    </OBJECT>
-                  </COMP>
-                </DEPENDENCIES>
-              </OBJECT>
               <OBJECT>
                 <ID name="Sequence Flow1" mc="Standard.BpmnSequenceFlow" uid="91ee9d6c-4dfd-426d-80ac-e857589aaac7"/>
                 <ATTRIBUTES>
@@ -348,41 +241,6 @@
                 </DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="Recibir formulario datos" mc="Standard.BpmnIntermediateCatchEvent" uid="1ab0c7ab-6c2a-4c73-8461-561674f8662a"/>
-                <ATTRIBUTES>
-                  <ATT name="ParallelMultiple">false</ATT>
-                  <ATT name="TriggeredByEvent">false</ATT>
-                  <ATT name="Name"><![CDATA[Recibir formulario datos]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <COMP relation="EventDefinitions">
-                    <OBJECT>
-                      <ID name="BpmnMessageEventDefinition" mc="Standard.BpmnMessageEventDefinition" uid="9bfe082d-fc50-4164-9d77-a92c2a5c42a6"/>
-                      <ATTRIBUTES>
-                        <ATT name="Name"><![CDATA[BpmnMessageEventDefinition]]></ATT>
-                        <ATT name="status">1970354901745664</ATT>
-                      </ATTRIBUTES>
-                      <DEPENDENCIES></DEPENDENCIES>
-                    </OBJECT>
-                  </COMP>
-                </DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="Enviar pagina de registro de datos" mc="Standard.BpmnServiceTask" uid="85dc6b00-b23d-418d-a136-2e5c8d9124a7"/>
-                <ATTRIBUTES>
-                  <ATT name="Implementation"><![CDATA[##WebService]]></ATT>
-                  <ATT name="IsGlobal">false</ATT>
-                  <ATT name="IsForCompensation">false</ATT>
-                  <ATT name="StartQuantity">1</ATT>
-                  <ATT name="CompletionQuantity">1</ATT>
-                  <ATT name="TriggeredByEvent">false</ATT>
-                  <ATT name="Name"><![CDATA[Enviar pagina de registro de datos]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES></DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
                 <ID name="No" mc="Standard.BpmnSequenceFlow" uid="0d328d21-3e9e-4edc-b234-9288aea6d33e"/>
                 <ATTRIBUTES>
                   <ATT name="IsImmediate">false</ATT>
@@ -399,157 +257,10 @@
                   </LINK>
                   <LINK relation="TargetRef">
                     <REFOBJ>
-                      <ID name="Enviar pagina de registro de datos" mc="Standard.BpmnServiceTask" uid="85dc6b00-b23d-418d-a136-2e5c8d9124a7"/>
+                      <ID name="Mostrar pagina de registro de datos" mc="Standard.BpmnServiceTask" uid="85dc6b00-b23d-418d-a136-2e5c8d9124a7"/>
                     </REFOBJ>
                   </LINK>
                 </DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="Sequence Flow3" mc="Standard.BpmnSequenceFlow" uid="58c713bb-37be-4648-b396-5e77a423f3a0"/>
-                <ATTRIBUTES>
-                  <ATT name="IsImmediate">false</ATT>
-                  <ATT name="ConditionExpression"></ATT>
-                  <ATT name="TriggeredByEvent">false</ATT>
-                  <ATT name="Name"><![CDATA[Sequence Flow3]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="SourceRef">
-                    <REFOBJ>
-                      <ID name="Introducir credenciales" mc="Standard.BpmnUserTask" uid="617d5dba-1a23-48a8-b67b-eea75b12ebac"/>
-                    </REFOBJ>
-                  </LINK>
-                  <LINK relation="TargetRef">
-                    <REFOBJ>
-                      <ID name="Recibir formulario datos" mc="Standard.BpmnIntermediateCatchEvent" uid="1ab0c7ab-6c2a-4c73-8461-561674f8662a"/>
-                    </REFOBJ>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="Introducir datos" mc="Standard.BpmnUserTask" uid="bc06a13d-5be2-4106-9b9a-75f2f09c1a95"/>
-                <ATTRIBUTES>
-                  <ATT name="Implementation"><![CDATA[##WebService]]></ATT>
-                  <ATT name="IsGlobal">false</ATT>
-                  <ATT name="IsForCompensation">false</ATT>
-                  <ATT name="StartQuantity">1</ATT>
-                  <ATT name="CompletionQuantity">1</ATT>
-                  <ATT name="TriggeredByEvent">false</ATT>
-                  <ATT name="Name"><![CDATA[Introducir datos]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES></DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="Sequence Flow4" mc="Standard.BpmnSequenceFlow" uid="172cb3d7-6502-45d0-9bd7-9417d5616d7a"/>
-                <ATTRIBUTES>
-                  <ATT name="IsImmediate">false</ATT>
-                  <ATT name="ConditionExpression"></ATT>
-                  <ATT name="TriggeredByEvent">false</ATT>
-                  <ATT name="Name"><![CDATA[Sequence Flow4]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="SourceRef">
-                    <REFOBJ>
-                      <ID name="Recibir formulario datos" mc="Standard.BpmnIntermediateCatchEvent" uid="1ab0c7ab-6c2a-4c73-8461-561674f8662a"/>
-                    </REFOBJ>
-                  </LINK>
-                  <LINK relation="TargetRef">
-                    <REFOBJ>
-                      <ID name="Introducir datos" mc="Standard.BpmnUserTask" uid="bc06a13d-5be2-4106-9b9a-75f2f09c1a95"/>
-                    </REFOBJ>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="Comprobar datos" mc="Standard.BpmnServiceTask" uid="dc440dd8-3143-4574-8e2b-a6ed96bcb1b5"/>
-                <ATTRIBUTES>
-                  <ATT name="Implementation"><![CDATA[##WebService]]></ATT>
-                  <ATT name="IsGlobal">false</ATT>
-                  <ATT name="IsForCompensation">false</ATT>
-                  <ATT name="StartQuantity">1</ATT>
-                  <ATT name="CompletionQuantity">1</ATT>
-                  <ATT name="TriggeredByEvent">false</ATT>
-                  <ATT name="Name"><![CDATA[Comprobar datos]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES></DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="Recibir datos" mc="Standard.BpmnIntermediateCatchEvent" uid="15fdaead-830c-45dd-9d5b-810fca5e4f76"/>
-                <ATTRIBUTES>
-                  <ATT name="ParallelMultiple">false</ATT>
-                  <ATT name="TriggeredByEvent">false</ATT>
-                  <ATT name="Name"><![CDATA[Recibir datos]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <COMP relation="EventDefinitions">
-                    <OBJECT>
-                      <ID name="BpmnMessageEventDefinition" mc="Standard.BpmnMessageEventDefinition" uid="4e206efa-e9eb-415b-95f7-f42455ac8e87"/>
-                      <ATTRIBUTES>
-                        <ATT name="Name"><![CDATA[BpmnMessageEventDefinition]]></ATT>
-                        <ATT name="status">1970354901745664</ATT>
-                      </ATTRIBUTES>
-                      <DEPENDENCIES></DEPENDENCIES>
-                    </OBJECT>
-                  </COMP>
-                </DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="Sequence Flow5" mc="Standard.BpmnSequenceFlow" uid="6cdea3cf-7d3a-431b-9c0c-9518912995d1"/>
-                <ATTRIBUTES>
-                  <ATT name="IsImmediate">false</ATT>
-                  <ATT name="ConditionExpression"></ATT>
-                  <ATT name="TriggeredByEvent">false</ATT>
-                  <ATT name="Name"><![CDATA[Sequence Flow5]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="SourceRef">
-                    <REFOBJ>
-                      <ID name="Recibir datos" mc="Standard.BpmnIntermediateCatchEvent" uid="15fdaead-830c-45dd-9d5b-810fca5e4f76"/>
-                    </REFOBJ>
-                  </LINK>
-                  <LINK relation="TargetRef">
-                    <REFOBJ>
-                      <ID name="Comprobar datos" mc="Standard.BpmnServiceTask" uid="dc440dd8-3143-4574-8e2b-a6ed96bcb1b5"/>
-                    </REFOBJ>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="Sequence Flow6" mc="Standard.BpmnSequenceFlow" uid="33fda729-fc05-4b21-bb9b-52aec5638f76"/>
-                <ATTRIBUTES>
-                  <ATT name="IsImmediate">false</ATT>
-                  <ATT name="ConditionExpression"></ATT>
-                  <ATT name="TriggeredByEvent">false</ATT>
-                  <ATT name="Name"><![CDATA[Sequence Flow6]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="SourceRef">
-                    <REFOBJ>
-                      <ID name="Enviar pagina de registro de datos" mc="Standard.BpmnServiceTask" uid="85dc6b00-b23d-418d-a136-2e5c8d9124a7"/>
-                    </REFOBJ>
-                  </LINK>
-                  <LINK relation="TargetRef">
-                    <REFOBJ>
-                      <ID name="Recibir datos" mc="Standard.BpmnIntermediateCatchEvent" uid="15fdaead-830c-45dd-9d5b-810fca5e4f76"/>
-                    </REFOBJ>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="Correctos?" mc="Standard.BpmnExclusiveGateway" uid="1c22a0c0-77e9-4987-9e31-8e407edce1d5"/>
-                <ATTRIBUTES>
-                  <ATT name="GatewayDirection">UnspecifiedDirection</ATT>
-                  <ATT name="TriggeredByEvent">false</ATT>
-                  <ATT name="Name"><![CDATA[Correctos?]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES></DEPENDENCIES>
               </OBJECT>
               <OBJECT>
                 <ID name="Sequence Flow7" mc="Standard.BpmnSequenceFlow" uid="609e161e-75f8-4fc3-89be-69620f5a6ef3"/>
@@ -572,51 +283,6 @@
                     </REFOBJ>
                   </LINK>
                 </DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="Mostrar errores" mc="Standard.BpmnServiceTask" uid="8786eb61-7b9c-4dc4-9bfd-9f613717d585"/>
-                <ATTRIBUTES>
-                  <ATT name="Implementation"><![CDATA[##WebService]]></ATT>
-                  <ATT name="IsGlobal">false</ATT>
-                  <ATT name="IsForCompensation">false</ATT>
-                  <ATT name="StartQuantity">1</ATT>
-                  <ATT name="CompletionQuantity">1</ATT>
-                  <ATT name="TriggeredByEvent">false</ATT>
-                  <ATT name="Name"><![CDATA[Mostrar errores]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <COMP relation="DependsOnDependency">
-                    <OBJECT>
-                      <ID name="" mc="Infrastructure.Dependency" uid="02c6a9d7-34be-48b2-aedd-5ea60167521b"/>
-                      <ATTRIBUTES>
-                        <ATT name="Name"></ATT>
-                        <ATT name="status">1970354901745664</ATT>
-                      </ATTRIBUTES>
-                      <DEPENDENCIES>
-                        <LINK relation="DependsOn">
-                          <REFOBJ>
-                            <ID name="Introducir datos" mc="Standard.BpmnUserTask" uid="bc06a13d-5be2-4106-9b9a-75f2f09c1a95"/>
-                          </REFOBJ>
-                        </LINK>
-                      </DEPENDENCIES>
-                    </OBJECT>
-                  </COMP>
-                </DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="Enviar pagina de registro de datos de pago" mc="Standard.BpmnServiceTask" uid="f9dba853-88d9-4258-ad5d-e874c475c735"/>
-                <ATTRIBUTES>
-                  <ATT name="Implementation"><![CDATA[##WebService]]></ATT>
-                  <ATT name="IsGlobal">false</ATT>
-                  <ATT name="IsForCompensation">false</ATT>
-                  <ATT name="StartQuantity">1</ATT>
-                  <ATT name="CompletionQuantity">1</ATT>
-                  <ATT name="TriggeredByEvent">false</ATT>
-                  <ATT name="Name"><![CDATA[Enviar pagina de registro de datos de pago]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES></DEPENDENCIES>
               </OBJECT>
               <OBJECT>
                 <ID name="Sequence Flow8" mc="Standard.BpmnSequenceFlow" uid="b395d5bc-7c02-4bf2-bb33-a28079d3ca21"/>
@@ -657,178 +323,10 @@
                   </LINK>
                   <LINK relation="TargetRef">
                     <REFOBJ>
-                      <ID name="Enviar pagina de registro de datos de pago" mc="Standard.BpmnServiceTask" uid="f9dba853-88d9-4258-ad5d-e874c475c735"/>
+                      <ID name="Mostrar pagina de registro de datos de pago" mc="Standard.BpmnServiceTask" uid="f9dba853-88d9-4258-ad5d-e874c475c735"/>
                     </REFOBJ>
                   </LINK>
                 </DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="Recibir pagina de registro de pago" mc="Standard.BpmnIntermediateCatchEvent" uid="96d87038-da00-43d4-bc79-1f8006d5c296"/>
-                <ATTRIBUTES>
-                  <ATT name="ParallelMultiple">false</ATT>
-                  <ATT name="TriggeredByEvent">false</ATT>
-                  <ATT name="Name"><![CDATA[Recibir pagina de registro de pago]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <COMP relation="EventDefinitions">
-                    <OBJECT>
-                      <ID name="BpmnMessageEventDefinition" mc="Standard.BpmnMessageEventDefinition" uid="6907591c-f588-4b6a-a1dd-08ebbd0e9898"/>
-                      <ATTRIBUTES>
-                        <ATT name="Name"><![CDATA[BpmnMessageEventDefinition]]></ATT>
-                        <ATT name="status">1970354901745664</ATT>
-                      </ATTRIBUTES>
-                      <DEPENDENCIES></DEPENDENCIES>
-                    </OBJECT>
-                  </COMP>
-                </DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="Sequence Flow10" mc="Standard.BpmnSequenceFlow" uid="1403b612-a7c7-4dbd-a224-a2e665a61b94"/>
-                <ATTRIBUTES>
-                  <ATT name="IsImmediate">false</ATT>
-                  <ATT name="ConditionExpression"></ATT>
-                  <ATT name="TriggeredByEvent">false</ATT>
-                  <ATT name="Name"><![CDATA[Sequence Flow10]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="SourceRef">
-                    <REFOBJ>
-                      <ID name="Introducir datos" mc="Standard.BpmnUserTask" uid="bc06a13d-5be2-4106-9b9a-75f2f09c1a95"/>
-                    </REFOBJ>
-                  </LINK>
-                  <LINK relation="TargetRef">
-                    <REFOBJ>
-                      <ID name="Recibir pagina de registro de pago" mc="Standard.BpmnIntermediateCatchEvent" uid="96d87038-da00-43d4-bc79-1f8006d5c296"/>
-                    </REFOBJ>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="Introducir datos de pago" mc="Standard.BpmnUserTask" uid="de981958-a5f2-4896-97d3-f08f34ab8742"/>
-                <ATTRIBUTES>
-                  <ATT name="Implementation"><![CDATA[##WebService]]></ATT>
-                  <ATT name="IsGlobal">false</ATT>
-                  <ATT name="IsForCompensation">false</ATT>
-                  <ATT name="StartQuantity">1</ATT>
-                  <ATT name="CompletionQuantity">1</ATT>
-                  <ATT name="TriggeredByEvent">false</ATT>
-                  <ATT name="Name"><![CDATA[Introducir datos de pago]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES></DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="Sequence Flow11" mc="Standard.BpmnSequenceFlow" uid="2454bc7b-8f19-4c3b-88ac-ad3091da7600"/>
-                <ATTRIBUTES>
-                  <ATT name="IsImmediate">false</ATT>
-                  <ATT name="ConditionExpression"></ATT>
-                  <ATT name="TriggeredByEvent">false</ATT>
-                  <ATT name="Name"><![CDATA[Sequence Flow11]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="SourceRef">
-                    <REFOBJ>
-                      <ID name="Recibir pagina de registro de pago" mc="Standard.BpmnIntermediateCatchEvent" uid="96d87038-da00-43d4-bc79-1f8006d5c296"/>
-                    </REFOBJ>
-                  </LINK>
-                  <LINK relation="TargetRef">
-                    <REFOBJ>
-                      <ID name="Introducir datos de pago" mc="Standard.BpmnUserTask" uid="de981958-a5f2-4896-97d3-f08f34ab8742"/>
-                    </REFOBJ>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="Recibir datos de pago" mc="Standard.BpmnIntermediateCatchEvent" uid="4da006da-c3ba-40fd-965c-878b1f1b60aa"/>
-                <ATTRIBUTES>
-                  <ATT name="ParallelMultiple">false</ATT>
-                  <ATT name="TriggeredByEvent">false</ATT>
-                  <ATT name="Name"><![CDATA[Recibir datos de pago]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <COMP relation="EventDefinitions">
-                    <OBJECT>
-                      <ID name="BpmnMessageEventDefinition" mc="Standard.BpmnMessageEventDefinition" uid="4996e7dc-0bcc-4960-89b7-421f5d8be7c6"/>
-                      <ATTRIBUTES>
-                        <ATT name="Name"><![CDATA[BpmnMessageEventDefinition]]></ATT>
-                        <ATT name="status">1970354901745664</ATT>
-                      </ATTRIBUTES>
-                      <DEPENDENCIES></DEPENDENCIES>
-                    </OBJECT>
-                  </COMP>
-                </DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="Sequence Flow12" mc="Standard.BpmnSequenceFlow" uid="3c3715df-c296-4484-a815-39063915e5d9"/>
-                <ATTRIBUTES>
-                  <ATT name="IsImmediate">false</ATT>
-                  <ATT name="ConditionExpression"></ATT>
-                  <ATT name="TriggeredByEvent">false</ATT>
-                  <ATT name="Name"><![CDATA[Sequence Flow12]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="SourceRef">
-                    <REFOBJ>
-                      <ID name="Enviar pagina de registro de datos de pago" mc="Standard.BpmnServiceTask" uid="f9dba853-88d9-4258-ad5d-e874c475c735"/>
-                    </REFOBJ>
-                  </LINK>
-                  <LINK relation="TargetRef">
-                    <REFOBJ>
-                      <ID name="Recibir datos de pago" mc="Standard.BpmnIntermediateCatchEvent" uid="4da006da-c3ba-40fd-965c-878b1f1b60aa"/>
-                    </REFOBJ>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="Realizar cobro del mes" mc="Standard.BpmnServiceTask" uid="29bcb717-5ff4-4363-8370-d1d7fd308b42"/>
-                <ATTRIBUTES>
-                  <ATT name="Implementation"><![CDATA[##WebService]]></ATT>
-                  <ATT name="IsGlobal">false</ATT>
-                  <ATT name="IsForCompensation">false</ATT>
-                  <ATT name="StartQuantity">1</ATT>
-                  <ATT name="CompletionQuantity">1</ATT>
-                  <ATT name="TriggeredByEvent">false</ATT>
-                  <ATT name="Name"><![CDATA[Realizar cobro del mes]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES></DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="Sequence Flow13" mc="Standard.BpmnSequenceFlow" uid="7845024d-533b-4292-bf10-6e197f2bddc9"/>
-                <ATTRIBUTES>
-                  <ATT name="IsImmediate">false</ATT>
-                  <ATT name="ConditionExpression"></ATT>
-                  <ATT name="TriggeredByEvent">false</ATT>
-                  <ATT name="Name"><![CDATA[Sequence Flow13]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="SourceRef">
-                    <REFOBJ>
-                      <ID name="Recibir datos de pago" mc="Standard.BpmnIntermediateCatchEvent" uid="4da006da-c3ba-40fd-965c-878b1f1b60aa"/>
-                    </REFOBJ>
-                  </LINK>
-                  <LINK relation="TargetRef">
-                    <REFOBJ>
-                      <ID name="Realizar cobro del mes" mc="Standard.BpmnServiceTask" uid="29bcb717-5ff4-4363-8370-d1d7fd308b42"/>
-                    </REFOBJ>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="Cobro exitoso?" mc="Standard.BpmnExclusiveGateway" uid="fa04240d-880c-4037-af78-a3e851f4f97b"/>
-                <ATTRIBUTES>
-                  <ATT name="GatewayDirection">UnspecifiedDirection</ATT>
-                  <ATT name="TriggeredByEvent">false</ATT>
-                  <ATT name="Name"><![CDATA[Cobro exitoso?]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES></DEPENDENCIES>
               </OBJECT>
               <OBJECT>
                 <ID name="Sequence Flow14" mc="Standard.BpmnSequenceFlow" uid="7be1714b-0ca9-485d-9987-9aa814a2c45e"/>
@@ -851,51 +349,6 @@
                     </REFOBJ>
                   </LINK>
                 </DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="Mostrar errores de pago" mc="Standard.BpmnServiceTask" uid="7b34c998-ab53-4a58-80ce-f135eaee908a"/>
-                <ATTRIBUTES>
-                  <ATT name="Implementation"><![CDATA[##WebService]]></ATT>
-                  <ATT name="IsGlobal">false</ATT>
-                  <ATT name="IsForCompensation">false</ATT>
-                  <ATT name="StartQuantity">1</ATT>
-                  <ATT name="CompletionQuantity">1</ATT>
-                  <ATT name="TriggeredByEvent">false</ATT>
-                  <ATT name="Name"><![CDATA[Mostrar errores de pago]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <COMP relation="DependsOnDependency">
-                    <OBJECT>
-                      <ID name="" mc="Infrastructure.Dependency" uid="e077d0e2-cac1-4033-b541-6e9b5a92170c"/>
-                      <ATTRIBUTES>
-                        <ATT name="Name"></ATT>
-                        <ATT name="status">1970354901745664</ATT>
-                      </ATTRIBUTES>
-                      <DEPENDENCIES>
-                        <LINK relation="DependsOn">
-                          <REFOBJ>
-                            <ID name="Introducir datos de pago" mc="Standard.BpmnUserTask" uid="de981958-a5f2-4896-97d3-f08f34ab8742"/>
-                          </REFOBJ>
-                        </LINK>
-                      </DEPENDENCIES>
-                    </OBJECT>
-                  </COMP>
-                </DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="Poner temporizador proximo mes" mc="Standard.BpmnServiceTask" uid="23d074ca-31ac-4534-8931-90b27cd8f0fc"/>
-                <ATTRIBUTES>
-                  <ATT name="Implementation"><![CDATA[##WebService]]></ATT>
-                  <ATT name="IsGlobal">false</ATT>
-                  <ATT name="IsForCompensation">false</ATT>
-                  <ATT name="StartQuantity">1</ATT>
-                  <ATT name="CompletionQuantity">1</ATT>
-                  <ATT name="TriggeredByEvent">false</ATT>
-                  <ATT name="Name"><![CDATA[Poner temporizador proximo mes]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES></DEPENDENCIES>
               </OBJECT>
               <OBJECT>
                 <ID name="Sequence Flow15" mc="Standard.BpmnSequenceFlow" uid="25150577-032d-4c67-bee8-8099335c0e7a"/>
@@ -942,87 +395,6 @@
                 </DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="Recibir pagina principal" mc="Standard.BpmnEndEvent" uid="f20f099e-0423-4d60-8556-38d0e99d7899"/>
-                <ATTRIBUTES>
-                  <ATT name="TriggeredByEvent">false</ATT>
-                  <ATT name="Name"><![CDATA[Recibir pagina principal]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES></DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="Sequence Flow17" mc="Standard.BpmnSequenceFlow" uid="9232c5cd-3327-401e-8c57-3a911ba2ae3c"/>
-                <ATTRIBUTES>
-                  <ATT name="IsImmediate">false</ATT>
-                  <ATT name="ConditionExpression"></ATT>
-                  <ATT name="TriggeredByEvent">false</ATT>
-                  <ATT name="Name"><![CDATA[Sequence Flow17]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="SourceRef">
-                    <REFOBJ>
-                      <ID name="Introducir datos de pago" mc="Standard.BpmnUserTask" uid="de981958-a5f2-4896-97d3-f08f34ab8742"/>
-                    </REFOBJ>
-                  </LINK>
-                  <LINK relation="TargetRef">
-                    <REFOBJ>
-                      <ID name="Recibir pagina principal" mc="Standard.BpmnEndEvent" uid="f20f099e-0423-4d60-8556-38d0e99d7899"/>
-                    </REFOBJ>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="Almacenar datos" mc="Standard.BpmnServiceTask" uid="5facbf5f-2dd1-44dd-90b6-52555de254af"/>
-                <ATTRIBUTES>
-                  <ATT name="Implementation"><![CDATA[##WebService]]></ATT>
-                  <ATT name="IsGlobal">false</ATT>
-                  <ATT name="IsForCompensation">false</ATT>
-                  <ATT name="StartQuantity">1</ATT>
-                  <ATT name="CompletionQuantity">1</ATT>
-                  <ATT name="TriggeredByEvent">false</ATT>
-                  <ATT name="Name"><![CDATA[Almacenar datos]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES></DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="Enviar pagina principal" mc="Standard.BpmnEndEvent" uid="6a9d7295-9122-4d93-a105-35fd5179e4a3"/>
-                <ATTRIBUTES>
-                  <ATT name="TriggeredByEvent">false</ATT>
-                  <ATT name="Name"><![CDATA[Enviar pagina principal]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <COMP relation="EventDefinitions">
-                    <OBJECT>
-                      <ID name="BpmnMessageEventDefinition" mc="Standard.BpmnMessageEventDefinition" uid="276c2b87-b09b-4b91-ac00-eff247fdaa65"/>
-                      <ATTRIBUTES>
-                        <ATT name="Name"><![CDATA[BpmnMessageEventDefinition]]></ATT>
-                        <ATT name="status">1970354901745664</ATT>
-                      </ATTRIBUTES>
-                      <DEPENDENCIES></DEPENDENCIES>
-                    </OBJECT>
-                  </COMP>
-                  <COMP relation="DependsOnDependency">
-                    <OBJECT>
-                      <ID name="" mc="Infrastructure.Dependency" uid="8ffae924-8ab6-4dc9-b591-9b5aaf488f64"/>
-                      <ATTRIBUTES>
-                        <ATT name="Name"></ATT>
-                        <ATT name="status">1970354901745664</ATT>
-                      </ATTRIBUTES>
-                      <DEPENDENCIES>
-                        <LINK relation="DependsOn">
-                          <REFOBJ>
-                            <ID name="Recibir pagina principal" mc="Standard.BpmnEndEvent" uid="f20f099e-0423-4d60-8556-38d0e99d7899"/>
-                          </REFOBJ>
-                        </LINK>
-                      </DEPENDENCIES>
-                    </OBJECT>
-                  </COMP>
-                </DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
                 <ID name="Sequence Flow18" mc="Standard.BpmnSequenceFlow" uid="a14e412c-0663-4068-a650-2420b931bb51"/>
                 <ATTRIBUTES>
                   <ATT name="IsImmediate">false</ATT>
@@ -1045,43 +417,28 @@
                 </DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="Sequence Flow19" mc="Standard.BpmnSequenceFlow" uid="346903a2-2b52-4939-ae40-51d69b4fe06f"/>
+                <ID name="Solicitar página de registro" mc="Standard.BpmnStartEvent" uid="216b43ee-fcf1-42c8-9cac-a89a7dd7a1f6"/>
                 <ATTRIBUTES>
-                  <ATT name="IsImmediate">false</ATT>
-                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="IsInterrupting">false</ATT>
+                  <ATT name="ParallelMultiple">false</ATT>
                   <ATT name="TriggeredByEvent">false</ATT>
-                  <ATT name="Name"><![CDATA[Sequence Flow19]]></ATT>
+                  <ATT name="Name"><![CDATA[Solicitar página de registro]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES>
-                  <LINK relation="SourceRef">
-                    <REFOBJ>
-                      <ID name="Almacenar datos" mc="Standard.BpmnServiceTask" uid="5facbf5f-2dd1-44dd-90b6-52555de254af"/>
-                    </REFOBJ>
-                  </LINK>
-                  <LINK relation="TargetRef">
-                    <REFOBJ>
-                      <ID name="Enviar pagina principal" mc="Standard.BpmnEndEvent" uid="6a9d7295-9122-4d93-a105-35fd5179e4a3"/>
-                    </REFOBJ>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="Solicitar pagina de registro" mc="Standard.BpmnServiceTask" uid="99a6b98b-df04-4c55-919f-769c7275b8b6"/>
-                <ATTRIBUTES>
-                  <ATT name="Implementation"><![CDATA[##WebService]]></ATT>
-                  <ATT name="IsGlobal">false</ATT>
-                  <ATT name="IsForCompensation">false</ATT>
-                  <ATT name="StartQuantity">1</ATT>
-                  <ATT name="CompletionQuantity">1</ATT>
-                  <ATT name="TriggeredByEvent">false</ATT>
-                  <ATT name="Name"><![CDATA[Solicitar pagina de registro]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
+                  <COMP relation="EventDefinitions">
+                    <OBJECT>
+                      <ID name="BpmnMessageEventDefinition" mc="Standard.BpmnMessageEventDefinition" uid="3548785d-7331-4a5e-a1e9-220062532289"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"><![CDATA[BpmnMessageEventDefinition]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
                   <COMP relation="DependsOnDependency">
                     <OBJECT>
-                      <ID name="" mc="Infrastructure.Dependency" uid="06c1f591-e423-4f79-93ef-e63779493ffd"/>
+                      <ID name="" mc="Infrastructure.Dependency" uid="74b34469-c97b-4fbd-b419-0230eb89e5e3"/>
                       <ATTRIBUTES>
                         <ATT name="Name"></ATT>
                         <ATT name="status">1970354901745664</ATT>
@@ -1089,7 +446,7 @@
                       <DEPENDENCIES>
                         <LINK relation="DependsOn">
                           <REFOBJ>
-                            <ID name="Solicitud de registro" mc="Standard.BpmnStartEvent" uid="4a991bbe-e443-402e-94f5-159d948899a3"/>
+                            <ID name="" mc="Standard.BpmnIntermediateCatchEvent" uid="b5061f7b-263d-4e64-b30c-ebcdc0dfcb15"/>
                           </REFOBJ>
                         </LINK>
                       </DEPENDENCIES>
@@ -1098,33 +455,56 @@
                 </DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="Sequence Flow20" mc="Standard.BpmnSequenceFlow" uid="41e2e03d-57ec-496b-b506-58787fe17980"/>
+                <ID name="Mostrar página de registro" mc="Standard.BpmnServiceTask" uid="954a6432-ecab-495d-8daf-9b71572837c8"/>
                 <ATTRIBUTES>
-                  <ATT name="IsImmediate">false</ATT>
-                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="Implementation"><![CDATA[##WebService]]></ATT>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
                   <ATT name="TriggeredByEvent">false</ATT>
-                  <ATT name="Name"><![CDATA[Sequence Flow20]]></ATT>
+                  <ATT name="Name"><![CDATA[Mostrar página de registro]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES>
-                  <LINK relation="SourceRef">
-                    <REFOBJ>
-                      <ID name="Inicio" mc="Standard.BpmnStartEvent" uid="216b43ee-fcf1-42c8-9cac-a89a7dd7a1f6"/>
-                    </REFOBJ>
-                  </LINK>
-                  <LINK relation="TargetRef">
-                    <REFOBJ>
-                      <ID name="Solicitar pagina de registro" mc="Standard.BpmnServiceTask" uid="99a6b98b-df04-4c55-919f-769c7275b8b6"/>
-                    </REFOBJ>
-                  </LINK>
+                  <COMP relation="DependsOnDependency">
+                    <OBJECT>
+                      <ID name="" mc="Infrastructure.Dependency" uid="ac4a9f1c-dcc0-44d0-8d87-5d838188c78a"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="DependsOn">
+                          <REFOBJ>
+                            <ID name="Recibir página de registro de credenciales" mc="Standard.BpmnIntermediateCatchEvent" uid="e0d7b41f-eba4-4f6d-9d98-4835b74df9b5"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
                 </DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="Recibir pagina de registro" mc="Standard.BpmnIntermediateCatchEvent" uid="b5061f7b-263d-4e64-b30c-ebcdc0dfcb15"/>
+                <ID name="Introducir credenciales" mc="Standard.BpmnUserTask" uid="617d5dba-1a23-48a8-b67b-eea75b12ebac"/>
+                <ATTRIBUTES>
+                  <ATT name="Implementation"><![CDATA[##WebService]]></ATT>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="Name"><![CDATA[Introducir credenciales]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="Standard.BpmnIntermediateCatchEvent" uid="b5061f7b-263d-4e64-b30c-ebcdc0dfcb15"/>
                 <ATTRIBUTES>
                   <ATT name="ParallelMultiple">false</ATT>
                   <ATT name="TriggeredByEvent">false</ATT>
-                  <ATT name="Name"><![CDATA[Recibir pagina de registro]]></ATT>
+                  <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES>
@@ -1141,29 +521,177 @@
                 </DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="Sequence Flow21" mc="Standard.BpmnSequenceFlow" uid="53f11620-4994-4cb3-a616-6a192779a17c"/>
+                <ID name="Sequence Flow20" mc="Standard.BpmnSequenceFlow" uid="29970019-67f5-4ea8-9df3-9cc6bf14d151"/>
                 <ATTRIBUTES>
                   <ATT name="IsImmediate">false</ATT>
                   <ATT name="ConditionExpression"></ATT>
                   <ATT name="TriggeredByEvent">false</ATT>
-                  <ATT name="Name"><![CDATA[Sequence Flow21]]></ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow20]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <LINK relation="SourceRef">
                     <REFOBJ>
-                      <ID name="Solicitar pagina de registro" mc="Standard.BpmnServiceTask" uid="99a6b98b-df04-4c55-919f-769c7275b8b6"/>
+                      <ID name="" mc="Standard.BpmnIntermediateCatchEvent" uid="b5061f7b-263d-4e64-b30c-ebcdc0dfcb15"/>
                     </REFOBJ>
                   </LINK>
                   <LINK relation="TargetRef">
                     <REFOBJ>
-                      <ID name="Recibir pagina de registro" mc="Standard.BpmnIntermediateCatchEvent" uid="b5061f7b-263d-4e64-b30c-ebcdc0dfcb15"/>
+                      <ID name="Mostrar página de registro" mc="Standard.BpmnServiceTask" uid="954a6432-ecab-495d-8daf-9b71572837c8"/>
                     </REFOBJ>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="Sequence Flow22" mc="Standard.BpmnSequenceFlow" uid="bf339f5d-e5ab-4363-a024-dd09e2aaaf8d"/>
+                <ID name="Mostrar sugerencias" mc="Standard.BpmnServiceTask" uid="86eb0d9a-0f0b-42aa-bc61-598f268a2a3d"/>
+                <ATTRIBUTES>
+                  <ATT name="Implementation"><![CDATA[##WebService]]></ATT>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="Name"><![CDATA[Mostrar sugerencias]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Comprobar nombre" mc="Standard.BpmnServiceTask" uid="07fb3d38-bdc6-4172-a76e-724cc74c9a1f"/>
+                <ATTRIBUTES>
+                  <ATT name="Implementation"><![CDATA[##WebService]]></ATT>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="Name"><![CDATA[Comprobar nombre]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Nombre existe?" mc="Standard.BpmnExclusiveGateway" uid="6919d311-a846-46d2-8f97-57762672f156"/>
+                <ATTRIBUTES>
+                  <ATT name="GatewayDirection">UnspecifiedDirection</ATT>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="Name"><![CDATA[Nombre existe?]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Mostrar pagina de registro de datos" mc="Standard.BpmnServiceTask" uid="85dc6b00-b23d-418d-a136-2e5c8d9124a7"/>
+                <ATTRIBUTES>
+                  <ATT name="Implementation"><![CDATA[##WebService]]></ATT>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="Name"><![CDATA[Mostrar pagina de registro de datos]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="DependsOnDependency">
+                    <OBJECT>
+                      <ID name="" mc="Infrastructure.Dependency" uid="a9b7c420-b2bb-4240-86da-be23ed16b338"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="DependsOn">
+                          <REFOBJ>
+                            <ID name="Recibir página de registro de datos" mc="Standard.BpmnIntermediateCatchEvent" uid="80c30a9f-ff3c-4f49-a48b-003552583801"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Recibir credenciales" mc="Standard.BpmnIntermediateCatchEvent" uid="1ab0c7ab-6c2a-4c73-8461-561674f8662a"/>
+                <ATTRIBUTES>
+                  <ATT name="ParallelMultiple">false</ATT>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="Name"><![CDATA[Recibir credenciales]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="EventDefinitions">
+                    <OBJECT>
+                      <ID name="BpmnMessageEventDefinition" mc="Standard.BpmnMessageEventDefinition" uid="9bfe082d-fc50-4164-9d77-a92c2a5c42a6"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"><![CDATA[BpmnMessageEventDefinition]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow4" mc="Standard.BpmnSequenceFlow" uid="9910ba8c-1fc3-4f6d-927b-4235457f37cc"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow4]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Mostrar página de registro" mc="Standard.BpmnServiceTask" uid="954a6432-ecab-495d-8daf-9b71572837c8"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Recibir credenciales" mc="Standard.BpmnIntermediateCatchEvent" uid="1ab0c7ab-6c2a-4c73-8461-561674f8662a"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Enviar credenciales" mc="Standard.BpmnIntermediateThrowEvent" uid="1fcc7e28-0f92-4e4b-8b30-675e42227192"/>
+                <ATTRIBUTES>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="Name"><![CDATA[Enviar credenciales]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="EventDefinitions">
+                    <OBJECT>
+                      <ID name="BpmnMessageEventDefinition" mc="Standard.BpmnMessageEventDefinition" uid="247a05d4-8242-4134-8507-dc56daefd6e0"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"><![CDATA[BpmnMessageEventDefinition]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                  <COMP relation="DependsOnDependency">
+                    <OBJECT>
+                      <ID name="" mc="Infrastructure.Dependency" uid="fbf7a9e8-b033-44b9-90dc-fb9398541c97"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="DependsOn">
+                          <REFOBJ>
+                            <ID name="Recibir credenciales" mc="Standard.BpmnIntermediateCatchEvent" uid="1ab0c7ab-6c2a-4c73-8461-561674f8662a"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow22" mc="Standard.BpmnSequenceFlow" uid="1fe076b5-4d6b-4fe7-b15a-01f849115096"/>
                 <ATTRIBUTES>
                   <ATT name="IsImmediate">false</ATT>
                   <ATT name="ConditionExpression"></ATT>
@@ -1174,7 +702,51 @@
                 <DEPENDENCIES>
                   <LINK relation="SourceRef">
                     <REFOBJ>
-                      <ID name="Recibir pagina de registro" mc="Standard.BpmnIntermediateCatchEvent" uid="b5061f7b-263d-4e64-b30c-ebcdc0dfcb15"/>
+                      <ID name="Introducir credenciales" mc="Standard.BpmnUserTask" uid="617d5dba-1a23-48a8-b67b-eea75b12ebac"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Enviar credenciales" mc="Standard.BpmnIntermediateThrowEvent" uid="1fcc7e28-0f92-4e4b-8b30-675e42227192"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow" mc="Standard.BpmnSequenceFlow" uid="34ec07ea-e531-4b5a-ac0f-95718be458e2"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Recibir credenciales" mc="Standard.BpmnIntermediateCatchEvent" uid="1ab0c7ab-6c2a-4c73-8461-561674f8662a"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Comprobar nombre" mc="Standard.BpmnServiceTask" uid="07fb3d38-bdc6-4172-a76e-724cc74c9a1f"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow3" mc="Standard.BpmnSequenceFlow" uid="beb96628-d411-43d0-a8c0-1a1fc8ff24aa"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow3]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Mostrar sugerencias" mc="Standard.BpmnServiceTask" uid="86eb0d9a-0f0b-42aa-bc61-598f268a2a3d"/>
                     </REFOBJ>
                   </LINK>
                   <LINK relation="TargetRef">
@@ -1185,7 +757,100 @@
                 </DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="Sequence Flow23" mc="Standard.BpmnSequenceFlow" uid="bd510ab5-7bc0-4bda-8181-10150340be73"/>
+                <ID name="Introducir datos" mc="Standard.BpmnUserTask" uid="bc06a13d-5be2-4106-9b9a-75f2f09c1a95"/>
+                <ATTRIBUTES>
+                  <ATT name="Implementation"><![CDATA[##WebService]]></ATT>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="Name"><![CDATA[Introducir datos]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Enviar datos" mc="Standard.BpmnIntermediateThrowEvent" uid="45bc6342-5f02-43bf-82d3-2e1c006df4e5"/>
+                <ATTRIBUTES>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="Name"><![CDATA[Enviar datos]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="EventDefinitions">
+                    <OBJECT>
+                      <ID name="BpmnMessageEventDefinition" mc="Standard.BpmnMessageEventDefinition" uid="44a381f7-9a88-4eff-bfc9-cb563a9dd3f1"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"><![CDATA[BpmnMessageEventDefinition]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                  <COMP relation="DependsOnDependency">
+                    <OBJECT>
+                      <ID name="" mc="Infrastructure.Dependency" uid="d03acf07-1b2e-4c14-8b22-8af3d0599038"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="DependsOn">
+                          <REFOBJ>
+                            <ID name="Recibir datos" mc="Standard.BpmnIntermediateCatchEvent" uid="4325ecb3-c782-413c-9c98-f9300989b00d"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow10" mc="Standard.BpmnSequenceFlow" uid="eeaa0a2c-914c-4b45-b33c-1f177582f693"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow10]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Introducir datos" mc="Standard.BpmnUserTask" uid="bc06a13d-5be2-4106-9b9a-75f2f09c1a95"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Enviar datos" mc="Standard.BpmnIntermediateThrowEvent" uid="45bc6342-5f02-43bf-82d3-2e1c006df4e5"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Recibir datos" mc="Standard.BpmnIntermediateCatchEvent" uid="4325ecb3-c782-413c-9c98-f9300989b00d"/>
+                <ATTRIBUTES>
+                  <ATT name="ParallelMultiple">false</ATT>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="Name"><![CDATA[Recibir datos]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="EventDefinitions">
+                    <OBJECT>
+                      <ID name="BpmnMessageEventDefinition" mc="Standard.BpmnMessageEventDefinition" uid="194c3ae9-f7ed-4664-baa2-332868253d64"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"><![CDATA[BpmnMessageEventDefinition]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow23" mc="Standard.BpmnSequenceFlow" uid="6d02dbad-1eed-401b-9d47-c41eb411cacb"/>
                 <ATTRIBUTES>
                   <ATT name="IsImmediate">false</ATT>
                   <ATT name="ConditionExpression"></ATT>
@@ -1196,12 +861,797 @@
                 <DEPENDENCIES>
                   <LINK relation="SourceRef">
                     <REFOBJ>
-                      <ID name="Solicitud de registro" mc="Standard.BpmnStartEvent" uid="4a991bbe-e443-402e-94f5-159d948899a3"/>
+                      <ID name="Mostrar pagina de registro de datos" mc="Standard.BpmnServiceTask" uid="85dc6b00-b23d-418d-a136-2e5c8d9124a7"/>
                     </REFOBJ>
                   </LINK>
                   <LINK relation="TargetRef">
                     <REFOBJ>
-                      <ID name="Analizar credenciales" mc="Standard.BpmnUserTask" uid="748d4a70-9f8a-45f3-8fc1-3ca58d59926b"/>
+                      <ID name="Recibir datos" mc="Standard.BpmnIntermediateCatchEvent" uid="4325ecb3-c782-413c-9c98-f9300989b00d"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Mostrar pagina de registro de datos de pago" mc="Standard.BpmnServiceTask" uid="f9dba853-88d9-4258-ad5d-e874c475c735"/>
+                <ATTRIBUTES>
+                  <ATT name="Implementation"><![CDATA[##WebService]]></ATT>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="Name"><![CDATA[Mostrar pagina de registro de datos de pago]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="DependsOnDependency">
+                    <OBJECT>
+                      <ID name="" mc="Infrastructure.Dependency" uid="e85e929a-464f-499d-9e42-7bc08ce04853"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="DependsOn">
+                          <REFOBJ>
+                            <ID name="Introducir datos de pago" mc="Standard.BpmnUserTask" uid="de981958-a5f2-4896-97d3-f08f34ab8742"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                    <OBJECT>
+                      <ID name="" mc="Infrastructure.Dependency" uid="34ba7073-6869-4ea8-9fc1-8a83df23504b"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="DependsOn">
+                          <REFOBJ>
+                            <ID name="Recibir página de registro de datos de pago" mc="Standard.BpmnIntermediateCatchEvent" uid="a8dc7219-e55f-42a9-a1aa-675da3221c45"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Mostrar errores" mc="Standard.BpmnServiceTask" uid="8786eb61-7b9c-4dc4-9bfd-9f613717d585"/>
+                <ATTRIBUTES>
+                  <ATT name="Implementation"><![CDATA[##WebService]]></ATT>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="Name"><![CDATA[Mostrar errores]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Correctos?" mc="Standard.BpmnExclusiveGateway" uid="1c22a0c0-77e9-4987-9e31-8e407edce1d5"/>
+                <ATTRIBUTES>
+                  <ATT name="GatewayDirection">UnspecifiedDirection</ATT>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="Name"><![CDATA[Correctos?]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Comprobar datos" mc="Standard.BpmnServiceTask" uid="dc440dd8-3143-4574-8e2b-a6ed96bcb1b5"/>
+                <ATTRIBUTES>
+                  <ATT name="Implementation"><![CDATA[##WebService]]></ATT>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="Name"><![CDATA[Comprobar datos]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow5" mc="Standard.BpmnSequenceFlow" uid="506285cc-09cf-419b-aa2f-8cc3666dbf5a"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow5]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Recibir datos" mc="Standard.BpmnIntermediateCatchEvent" uid="4325ecb3-c782-413c-9c98-f9300989b00d"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Comprobar datos" mc="Standard.BpmnServiceTask" uid="dc440dd8-3143-4574-8e2b-a6ed96bcb1b5"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow12" mc="Standard.BpmnSequenceFlow" uid="3dc2d52b-19f2-4a5e-9f26-8a416ddbe4e3"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow12]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Mostrar errores" mc="Standard.BpmnServiceTask" uid="8786eb61-7b9c-4dc4-9bfd-9f613717d585"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Introducir datos" mc="Standard.BpmnUserTask" uid="bc06a13d-5be2-4106-9b9a-75f2f09c1a95"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Introducir datos de pago" mc="Standard.BpmnUserTask" uid="de981958-a5f2-4896-97d3-f08f34ab8742"/>
+                <ATTRIBUTES>
+                  <ATT name="Implementation"><![CDATA[##WebService]]></ATT>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="Name"><![CDATA[Introducir datos de pago]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Enviar datos de pago" mc="Standard.BpmnIntermediateThrowEvent" uid="24063870-413e-4505-9154-ea777efc9cac"/>
+                <ATTRIBUTES>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="Name"><![CDATA[Enviar datos de pago]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="EventDefinitions">
+                    <OBJECT>
+                      <ID name="BpmnMessageEventDefinition" mc="Standard.BpmnMessageEventDefinition" uid="edf1710f-f6ef-4478-97d7-c35ba8815831"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"><![CDATA[BpmnMessageEventDefinition]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                  <COMP relation="DependsOnDependency">
+                    <OBJECT>
+                      <ID name="" mc="Infrastructure.Dependency" uid="a2fff48c-574d-4ad1-9b66-a7be4ed1d7e6"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="DependsOn">
+                          <REFOBJ>
+                            <ID name="Recibir datos de pago" mc="Standard.BpmnIntermediateCatchEvent" uid="57b60ae0-e545-4063-b4bd-c1a7f2058ee8"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow13" mc="Standard.BpmnSequenceFlow" uid="86aec7eb-2e06-4ba7-a477-59179857eb86"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow13]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Introducir datos de pago" mc="Standard.BpmnUserTask" uid="de981958-a5f2-4896-97d3-f08f34ab8742"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Enviar datos de pago" mc="Standard.BpmnIntermediateThrowEvent" uid="24063870-413e-4505-9154-ea777efc9cac"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Recibir datos de pago" mc="Standard.BpmnIntermediateCatchEvent" uid="57b60ae0-e545-4063-b4bd-c1a7f2058ee8"/>
+                <ATTRIBUTES>
+                  <ATT name="ParallelMultiple">false</ATT>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="Name"><![CDATA[Recibir datos de pago]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="EventDefinitions">
+                    <OBJECT>
+                      <ID name="BpmnMessageEventDefinition" mc="Standard.BpmnMessageEventDefinition" uid="70589805-2473-45e0-9acd-0ea88e981162"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"><![CDATA[BpmnMessageEventDefinition]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow17" mc="Standard.BpmnSequenceFlow" uid="72da1974-9a13-4025-82c9-9031e86ff890"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow17]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Mostrar pagina de registro de datos de pago" mc="Standard.BpmnServiceTask" uid="f9dba853-88d9-4258-ad5d-e874c475c735"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Recibir datos de pago" mc="Standard.BpmnIntermediateCatchEvent" uid="57b60ae0-e545-4063-b4bd-c1a7f2058ee8"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Realizar cobro del mes" mc="Standard.BpmnServiceTask" uid="29bcb717-5ff4-4363-8370-d1d7fd308b42"/>
+                <ATTRIBUTES>
+                  <ATT name="Implementation"><![CDATA[##WebService]]></ATT>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="Name"><![CDATA[Realizar cobro del mes]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow24" mc="Standard.BpmnSequenceFlow" uid="24ddd32c-f5ab-42be-9127-d5f2bbc6b15c"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow24]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Recibir datos de pago" mc="Standard.BpmnIntermediateCatchEvent" uid="57b60ae0-e545-4063-b4bd-c1a7f2058ee8"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Realizar cobro del mes" mc="Standard.BpmnServiceTask" uid="29bcb717-5ff4-4363-8370-d1d7fd308b42"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Cobro exitoso?" mc="Standard.BpmnExclusiveGateway" uid="fa04240d-880c-4037-af78-a3e851f4f97b"/>
+                <ATTRIBUTES>
+                  <ATT name="GatewayDirection">UnspecifiedDirection</ATT>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="Name"><![CDATA[Cobro exitoso?]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Poner temporizador proximo mes" mc="Standard.BpmnServiceTask" uid="23d074ca-31ac-4534-8931-90b27cd8f0fc"/>
+                <ATTRIBUTES>
+                  <ATT name="Implementation"><![CDATA[##WebService]]></ATT>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="Name"><![CDATA[Poner temporizador proximo mes]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow25" mc="Standard.BpmnSequenceFlow" uid="c9ddc0fd-2875-4cc3-b981-a305bf51fc2e"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow25]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Mostrar errores de pago" mc="Standard.BpmnServiceTask" uid="7b34c998-ab53-4a58-80ce-f135eaee908a"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Introducir datos de pago" mc="Standard.BpmnUserTask" uid="de981958-a5f2-4896-97d3-f08f34ab8742"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Mostrar errores de pago" mc="Standard.BpmnServiceTask" uid="7b34c998-ab53-4a58-80ce-f135eaee908a"/>
+                <ATTRIBUTES>
+                  <ATT name="Implementation"><![CDATA[##WebService]]></ATT>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="Name"><![CDATA[Mostrar errores de pago]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Almacenar datos" mc="Standard.BpmnServiceTask" uid="5facbf5f-2dd1-44dd-90b6-52555de254af"/>
+                <ATTRIBUTES>
+                  <ATT name="Implementation"><![CDATA[##WebService]]></ATT>
+                  <ATT name="IsGlobal">false</ATT>
+                  <ATT name="IsForCompensation">false</ATT>
+                  <ATT name="StartQuantity">1</ATT>
+                  <ATT name="CompletionQuantity">1</ATT>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="Name"><![CDATA[Almacenar datos]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Recibir pagina principal" mc="Standard.BpmnEndEvent" uid="f20f099e-0423-4d60-8556-38d0e99d7899"/>
+                <ATTRIBUTES>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="Name"><![CDATA[Recibir pagina principal]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Enviar página principal" mc="Standard.BpmnIntermediateThrowEvent" uid="d2f697c0-a733-4689-aa80-677f80ad7f57"/>
+                <ATTRIBUTES>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="Name"><![CDATA[Enviar página principal]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="EventDefinitions">
+                    <OBJECT>
+                      <ID name="BpmnMessageEventDefinition" mc="Standard.BpmnMessageEventDefinition" uid="252ac0ee-0507-4ae1-b706-cfe6d0c62159"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"><![CDATA[BpmnMessageEventDefinition]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                  <COMP relation="DependsOnDependency">
+                    <OBJECT>
+                      <ID name="" mc="Infrastructure.Dependency" uid="72af7d3e-fc3c-48eb-9a1f-e7a2e5a9df2b"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="DependsOn">
+                          <REFOBJ>
+                            <ID name="Recibir pagina principal" mc="Standard.BpmnEndEvent" uid="f20f099e-0423-4d60-8556-38d0e99d7899"/>
+                          </REFOBJ>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow19" mc="Standard.BpmnSequenceFlow" uid="9ab3e42e-3470-436f-bf72-c5514df4dd47"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow19]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Almacenar datos" mc="Standard.BpmnServiceTask" uid="5facbf5f-2dd1-44dd-90b6-52555de254af"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Enviar página principal" mc="Standard.BpmnIntermediateThrowEvent" uid="d2f697c0-a733-4689-aa80-677f80ad7f57"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow26" mc="Standard.BpmnSequenceFlow" uid="71eb6049-00bb-483d-9f01-f3e4441c413e"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow26]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Enviar datos de pago" mc="Standard.BpmnIntermediateThrowEvent" uid="24063870-413e-4505-9154-ea777efc9cac"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Recibir pagina principal" mc="Standard.BpmnEndEvent" uid="f20f099e-0423-4d60-8556-38d0e99d7899"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Se va de la página d registro" mc="Standard.BpmnEndEvent" uid="bbe459cb-6642-4a21-9278-d89a2337e92e"/>
+                <ATTRIBUTES>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="Name"><![CDATA[Se va de la página d registro]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Recibir página de registro de credenciales" mc="Standard.BpmnIntermediateCatchEvent" uid="e0d7b41f-eba4-4f6d-9d98-4835b74df9b5"/>
+                <ATTRIBUTES>
+                  <ATT name="ParallelMultiple">false</ATT>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="Name"><![CDATA[Recibir página de registro de credenciales]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="EventDefinitions">
+                    <OBJECT>
+                      <ID name="BpmnMessageEventDefinition" mc="Standard.BpmnMessageEventDefinition" uid="de40aa5b-b8fe-4c0f-8076-8dbb82170823"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"><![CDATA[BpmnMessageEventDefinition]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow6" mc="Standard.BpmnSequenceFlow" uid="bb052484-8ebd-48a0-83e5-9e7d71f08f67"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow6]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Solicitar página de registro" mc="Standard.BpmnStartEvent" uid="216b43ee-fcf1-42c8-9cac-a89a7dd7a1f6"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Recibir página de registro de credenciales" mc="Standard.BpmnIntermediateCatchEvent" uid="e0d7b41f-eba4-4f6d-9d98-4835b74df9b5"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Decide introducir credenciales?" mc="Standard.BpmnExclusiveGateway" uid="366f614c-3d58-43e5-a224-47f43124375f"/>
+                <ATTRIBUTES>
+                  <ATT name="GatewayDirection">UnspecifiedDirection</ATT>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="Name"><![CDATA[Decide introducir credenciales?]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow21" mc="Standard.BpmnSequenceFlow" uid="e6d823d7-a553-4ac1-be06-5b0c37a6d00c"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow21]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Recibir página de registro de credenciales" mc="Standard.BpmnIntermediateCatchEvent" uid="e0d7b41f-eba4-4f6d-9d98-4835b74df9b5"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Decide introducir credenciales?" mc="Standard.BpmnExclusiveGateway" uid="366f614c-3d58-43e5-a224-47f43124375f"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="Standard.BpmnSequenceFlow" uid="aabdedc6-51c2-40c9-8e19-9245d78e0f14"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Decide introducir credenciales?" mc="Standard.BpmnExclusiveGateway" uid="366f614c-3d58-43e5-a224-47f43124375f"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Introducir credenciales" mc="Standard.BpmnUserTask" uid="617d5dba-1a23-48a8-b67b-eea75b12ebac"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow28" mc="Standard.BpmnSequenceFlow" uid="2b1ef7c2-6aa0-4c7d-91c6-aec6f7dc5e6a"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow28]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Decide introducir credenciales?" mc="Standard.BpmnExclusiveGateway" uid="366f614c-3d58-43e5-a224-47f43124375f"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Se va de la página d registro" mc="Standard.BpmnEndEvent" uid="bbe459cb-6642-4a21-9278-d89a2337e92e"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Recibir página de registro de datos" mc="Standard.BpmnIntermediateCatchEvent" uid="80c30a9f-ff3c-4f49-a48b-003552583801"/>
+                <ATTRIBUTES>
+                  <ATT name="ParallelMultiple">false</ATT>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="Name"><![CDATA[Recibir página de registro de datos]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="EventDefinitions">
+                    <OBJECT>
+                      <ID name="BpmnMessageEventDefinition" mc="Standard.BpmnMessageEventDefinition" uid="1aa15194-faf2-455f-9826-17f4270a4ddb"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"><![CDATA[BpmnMessageEventDefinition]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow29" mc="Standard.BpmnSequenceFlow" uid="569ff49e-fabe-42e6-97f9-09dc5eb3eaf3"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow29]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Enviar credenciales" mc="Standard.BpmnIntermediateThrowEvent" uid="1fcc7e28-0f92-4e4b-8b30-675e42227192"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Recibir página de registro de datos" mc="Standard.BpmnIntermediateCatchEvent" uid="80c30a9f-ff3c-4f49-a48b-003552583801"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Decide introducir datos?" mc="Standard.BpmnExclusiveGateway" uid="06bca88a-f02f-41c8-8445-ce31caaa4f1a"/>
+                <ATTRIBUTES>
+                  <ATT name="GatewayDirection">UnspecifiedDirection</ATT>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="Name"><![CDATA[Decide introducir datos?]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow30" mc="Standard.BpmnSequenceFlow" uid="c0e2244d-245e-4a0d-83ed-7e2ea96296c5"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow30]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Recibir página de registro de datos" mc="Standard.BpmnIntermediateCatchEvent" uid="80c30a9f-ff3c-4f49-a48b-003552583801"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Decide introducir datos?" mc="Standard.BpmnExclusiveGateway" uid="06bca88a-f02f-41c8-8445-ce31caaa4f1a"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow31" mc="Standard.BpmnSequenceFlow" uid="6a9f014d-2367-47ba-ab85-c1f6757cba1a"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"><![CDATA[Si]]></ATT>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow31]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Decide introducir datos?" mc="Standard.BpmnExclusiveGateway" uid="06bca88a-f02f-41c8-8445-ce31caaa4f1a"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Introducir datos" mc="Standard.BpmnUserTask" uid="bc06a13d-5be2-4106-9b9a-75f2f09c1a95"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow32" mc="Standard.BpmnSequenceFlow" uid="364a0807-7aa0-491d-a091-e6d484847a16"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"><![CDATA[No]]></ATT>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow32]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Decide introducir datos?" mc="Standard.BpmnExclusiveGateway" uid="06bca88a-f02f-41c8-8445-ce31caaa4f1a"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Se va de la página d registro" mc="Standard.BpmnEndEvent" uid="bbe459cb-6642-4a21-9278-d89a2337e92e"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Decide introducir datos de pago?" mc="Standard.BpmnExclusiveGateway" uid="b05ba72c-165a-4f99-84fd-cb4a61a818ba"/>
+                <ATTRIBUTES>
+                  <ATT name="GatewayDirection">UnspecifiedDirection</ATT>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="Name"><![CDATA[Decide introducir datos de pago?]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Recibir página de registro de datos de pago" mc="Standard.BpmnIntermediateCatchEvent" uid="a8dc7219-e55f-42a9-a1aa-675da3221c45"/>
+                <ATTRIBUTES>
+                  <ATT name="ParallelMultiple">false</ATT>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="Name"><![CDATA[Recibir página de registro de datos de pago]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="EventDefinitions">
+                    <OBJECT>
+                      <ID name="BpmnMessageEventDefinition" mc="Standard.BpmnMessageEventDefinition" uid="8614a23e-3a63-4b6a-b688-f9ca8c0cbf6e"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"><![CDATA[BpmnMessageEventDefinition]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow11" mc="Standard.BpmnSequenceFlow" uid="6482a327-b0ef-4e7c-9a0c-20ef61195c60"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow11]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Enviar datos" mc="Standard.BpmnIntermediateThrowEvent" uid="45bc6342-5f02-43bf-82d3-2e1c006df4e5"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Recibir página de registro de datos de pago" mc="Standard.BpmnIntermediateCatchEvent" uid="a8dc7219-e55f-42a9-a1aa-675da3221c45"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow33" mc="Standard.BpmnSequenceFlow" uid="024973f1-78c0-4ce8-98b8-9a5eb777835c"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"></ATT>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow33]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Recibir página de registro de datos de pago" mc="Standard.BpmnIntermediateCatchEvent" uid="a8dc7219-e55f-42a9-a1aa-675da3221c45"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Decide introducir datos de pago?" mc="Standard.BpmnExclusiveGateway" uid="b05ba72c-165a-4f99-84fd-cb4a61a818ba"/>
+                    </REFOBJ>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Sequence Flow35" mc="Standard.BpmnSequenceFlow" uid="bd711741-5e8d-4ae1-9f2c-ee96a14924c0"/>
+                <ATTRIBUTES>
+                  <ATT name="IsImmediate">false</ATT>
+                  <ATT name="ConditionExpression"><![CDATA[No]]></ATT>
+                  <ATT name="TriggeredByEvent">false</ATT>
+                  <ATT name="Name"><![CDATA[Sequence Flow35]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="SourceRef">
+                    <REFOBJ>
+                      <ID name="Decide introducir datos de pago?" mc="Standard.BpmnExclusiveGateway" uid="b05ba72c-165a-4f99-84fd-cb4a61a818ba"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="TargetRef">
+                    <REFOBJ>
+                      <ID name="Se va de la página d registro" mc="Standard.BpmnEndEvent" uid="bbe459cb-6642-4a21-9278-d89a2337e92e"/>
                     </REFOBJ>
                   </LINK>
                 </DEPENDENCIES>
@@ -1219,105 +1669,7 @@
             <ATT name="Name"><![CDATA[Collaboration]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
-          <DEPENDENCIES>
-            <COMP relation="MessageFlow">
-              <OBJECT>
-                <ID name="Envio pagina de registro" mc="Standard.BpmnMessageFlow" uid="25ac46ca-3a99-49de-a220-aa051a919513"/>
-                <ATTRIBUTES>
-                  <ATT name="Name"><![CDATA[Envio pagina de registro]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="SourceRef">
-                    <REFOBJ>
-                      <ID name="Solicitud de registro" mc="Standard.BpmnStartEvent" uid="4a991bbe-e443-402e-94f5-159d948899a3"/>
-                    </REFOBJ>
-                  </LINK>
-                  <LINK relation="TargetRef">
-                    <REFOBJ>
-                      <ID name="Recibir pagina de registro" mc="Standard.BpmnIntermediateCatchEvent" uid="b5061f7b-263d-4e64-b30c-ebcdc0dfcb15"/>
-                    </REFOBJ>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="" mc="Standard.BpmnMessageFlow" uid="c2ae1f05-71d4-4df2-a9c5-002955515d32"/>
-                <ATTRIBUTES>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="SourceRef">
-                    <REFOBJ>
-                      <ID name="Enviar pagina de registro de datos" mc="Standard.BpmnServiceTask" uid="85dc6b00-b23d-418d-a136-2e5c8d9124a7"/>
-                    </REFOBJ>
-                  </LINK>
-                  <LINK relation="TargetRef">
-                    <REFOBJ>
-                      <ID name="Recibir formulario datos" mc="Standard.BpmnIntermediateCatchEvent" uid="1ab0c7ab-6c2a-4c73-8461-561674f8662a"/>
-                    </REFOBJ>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="" mc="Standard.BpmnMessageFlow" uid="442261cb-a637-4389-9a28-af74cdaf7e14"/>
-                <ATTRIBUTES>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="SourceRef">
-                    <REFOBJ>
-                      <ID name="Introducir datos" mc="Standard.BpmnUserTask" uid="bc06a13d-5be2-4106-9b9a-75f2f09c1a95"/>
-                    </REFOBJ>
-                  </LINK>
-                  <LINK relation="TargetRef">
-                    <REFOBJ>
-                      <ID name="Recibir datos" mc="Standard.BpmnIntermediateCatchEvent" uid="15fdaead-830c-45dd-9d5b-810fca5e4f76"/>
-                    </REFOBJ>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="" mc="Standard.BpmnMessageFlow" uid="e0e19e4a-0536-4b07-b8f3-e5cfd3b6fca6"/>
-                <ATTRIBUTES>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="SourceRef">
-                    <REFOBJ>
-                      <ID name="Enviar pagina de registro de datos de pago" mc="Standard.BpmnServiceTask" uid="f9dba853-88d9-4258-ad5d-e874c475c735"/>
-                    </REFOBJ>
-                  </LINK>
-                  <LINK relation="TargetRef">
-                    <REFOBJ>
-                      <ID name="Recibir pagina de registro de pago" mc="Standard.BpmnIntermediateCatchEvent" uid="96d87038-da00-43d4-bc79-1f8006d5c296"/>
-                    </REFOBJ>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="" mc="Standard.BpmnMessageFlow" uid="b54c063b-4def-4ced-95bf-8cd05038b3a5"/>
-                <ATTRIBUTES>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="SourceRef">
-                    <REFOBJ>
-                      <ID name="Introducir datos de pago" mc="Standard.BpmnUserTask" uid="de981958-a5f2-4896-97d3-f08f34ab8742"/>
-                    </REFOBJ>
-                  </LINK>
-                  <LINK relation="TargetRef">
-                    <REFOBJ>
-                      <ID name="Recibir datos de pago" mc="Standard.BpmnIntermediateCatchEvent" uid="4da006da-c3ba-40fd-965c-878b1f1b60aa"/>
-                    </REFOBJ>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-            </COMP>
-          </DEPENDENCIES>
+          <DEPENDENCIES></DEPENDENCIES>
         </OBJECT>
       </COMP>
     </DEPENDENCIES>
